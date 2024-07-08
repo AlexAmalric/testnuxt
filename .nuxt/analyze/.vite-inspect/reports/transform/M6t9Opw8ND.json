@@ -1,0 +1,221 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Modals.client.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveDynamicComponent as _resolveDynamicComponent, isRef as _isRef, mergeProps as _mergeProps, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode } from \"vue\"\n\nimport { inject } from 'vue'\nimport { useModal, modalInjectionKey } from '../../composables/useModal'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Modals.client',\n  setup(__props) {\n\nconst modalState = inject(modalInjectionKey)\n\nconst { isOpen } = useModal()\n\nreturn (_ctx: any,_cache: any) => {\n  return (_unref(modalState))\n    ? (_openBlock(), _createBlock(_resolveDynamicComponent(_unref(modalState).component), _mergeProps({ key: 0 }, _unref(modalState).props, {\n        modelValue: _unref(isOpen),\n        \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event: any) => (_isRef(isOpen) ? (isOpen).value = $event : null))\n      }), null, 16, [\"modelValue\"]))\n    : _createCommentVNode(\"\", true)\n}\n}\n\n})",
+      "start": 1720085726639,
+      "end": 1720085726639
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726639,
+      "end": 1720085726639,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726639,
+      "end": 1720085726639,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726639,
+      "end": 1720085726639,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726639,
+      "end": 1720085726639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveDynamicComponent as _resolveDynamicComponent, isRef as _isRef, mergeProps as _mergeProps, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode } from \"vue\";\nimport { inject } from \"vue\";\nimport { useModal, modalInjectionKey } from \"../../composables/useModal\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Modals.client\",\n  setup(__props) {\n    const modalState = inject(modalInjectionKey);\n    const { isOpen } = useModal();\n    return (_ctx, _cache) => {\n      return _unref(modalState) ? (_openBlock(), _createBlock(_resolveDynamicComponent(_unref(modalState).component), _mergeProps({ key: 0 }, _unref(modalState).props, {\n        modelValue: _unref(isOpen),\n        \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event) => _isRef(isOpen) ? isOpen.value = $event : null)\n      }), null, 16, [\"modelValue\"])) : _createCommentVNode(\"\", true);\n    };\n  }\n});\n",
+      "start": 1720085726639,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Modals.client.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveDynamicComponent as _resolveDynamicComponent, isRef as _isRef, mergeProps as _mergeProps, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode } from \"vue\"\n\nimport { inject } from 'vue'\nimport { useModal, modalInjectionKey } from '../../composables/useModal'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Modals.client',\n  setup(__props) {\n\nconst modalState = inject(modalInjectionKey)\n\nconst { isOpen } = useModal()\n\nreturn (_ctx: any,_cache: any) => {\n  return (_unref(modalState))\n    ? (_openBlock(), _createBlock(_resolveDynamicComponent(_unref(modalState).component), _mergeProps({ key: 0 }, _unref(modalState).props, {\n        modelValue: _unref(isOpen),\n        \"onUpdate:modelValue\": _cache[0] || (_cache[0] = ($event: any) => (_isRef(isOpen) ? (isOpen).value = $event : null))\n      }), null, 16, [\"modelValue\"]))\n    : _createCommentVNode(\"\", true)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,2BAA2B,0BAA0B,SAAS,QAAQ,cAAc,aAAa,aAAa,YAAY,eAAe,cAAc,sBAAsB,2BAA2B;AAElO,SAAS,cAAc;AACvB,SAAS,UAAU,yBAAyB;AAG5C,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,UAAM,aAAa,OAAO,iBAAiB;AAE3C,UAAM,EAAE,OAAO,IAAI,SAAS;AAE5B,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,OAAO,UAAU,KACpB,WAAW,GAAG,aAAa,yBAAyB,OAAO,UAAU,EAAE,SAAS,GAAG,YAAY,EAAE,KAAK,EAAE,GAAG,OAAO,UAAU,EAAE,OAAO;AAAA,QACpI,YAAY,OAAO,MAAM;AAAA,QACzB,uBAAuB,OAAO,CAAC,MAAM,OAAO,CAAC,IAAI,CAAC,WAAiB,OAAO,MAAM,IAAK,OAAQ,QAAQ,SAAS;AAAA,MAChH,CAAC,GAAG,MAAM,IAAI,CAAC,YAAY,CAAC,KAC5B,oBAAoB,IAAI,IAAI;AAAA,IAClC;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726654,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726656,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726657,
+      "end": 1720085726658,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726663,
+      "end": 1720085726663,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726669,
+      "end": 1720085726669,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "normal"
+    }
+  ]
+}

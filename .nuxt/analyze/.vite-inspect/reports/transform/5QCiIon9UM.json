@@ -1,0 +1,231 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/ColorMode.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1)\n\nimport { computed } from 'vue'\n// @ts-ignore\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ColorMode',\n  setup(__props) {\n\nconst colorMode = useColorMode()\nconst isDark = computed({\n  get() {\n    return colorMode.value === 'dark'\n  },\n  set() {\n    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'\n  }\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    fallback: _withCtx(() => [\n      _hoisted_1\n    ]),\n    default: _withCtx(() => [\n      _createVNode(_component_UTooltip, { text: \"Color Mode\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UButton, {\n            icon: isDark.value ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid',\n            color: \"gray\",\n            variant: \"ghost\",\n            \"aria-label\": \"Theme\",\n            onClick: _cache[0] || (_cache[0] = ($event: any) => (isDark.value = !isDark.value)),\n            class: \"rounded-full\"\n          }, null, 8, [\"icon\"])\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720085725840,
+      "end": 1720085725840
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085725840,
+      "end": 1720085725840,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085725840,
+      "end": 1720085725840,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085725840,
+      "end": 1720085725840,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085725840,
+      "end": 1720085725840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { computed } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ColorMode\",\n  setup(__props) {\n    const colorMode = useColorMode();\n    const isDark = computed({\n      get() {\n        return colorMode.value === \"dark\";\n      },\n      set() {\n        colorMode.preference = colorMode.value === \"dark\" ? \"light\" : \"dark\";\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Color Mode\" }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UButton, {\n                icon: isDark.value ? \"i-heroicons-moon-20-solid\" : \"i-heroicons-sun-20-solid\",\n                color: \"gray\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: _cache[0] || (_cache[0] = ($event) => isDark.value = !isDark.value),\n                class: \"rounded-full\"\n              }, null, 8, [\"icon\"])\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085725840,
+      "end": 1720085726167,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/ColorMode.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1)\n\nimport { computed } from 'vue'\n// @ts-ignore\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ColorMode',\n  setup(__props) {\n\nconst colorMode = useColorMode()\nconst isDark = computed({\n  get() {\n    return colorMode.value === 'dark'\n  },\n  set() {\n    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'\n  }\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    fallback: _withCtx(() => [\n      _hoisted_1\n    ]),\n    default: _withCtx(() => [\n      _createVNode(_component_UTooltip, { text: \"Color Mode\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UButton, {\n            icon: isDark.value ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid',\n            color: \"gray\",\n            variant: \"ghost\",\n            \"aria-label\": \"Theme\",\n            onClick: _cache[0] || (_cache[0] = ($event: any) => (isDark.value = !isDark.value)),\n            class: \"rounded-full\"\n          }, null, 8, [\"icon\"])\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,eAAe,cAAc,WAAW,UAAU,sBAAsB,qBAAqB,aAAa,YAAY,eAAe,oBAAoB;AAEzM,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,UAAU,GAAG,MAAM,EAAE;AAEzF,SAAS,gBAAgB;AAGzB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,UAAM,YAAY,aAAa;AAC/B,UAAM,SAAS,SAAS;AAAA,MACtB,MAAM;AACJ,eAAO,UAAU,UAAU;AAAA,MAC7B;AAAA,MACA,MAAM;AACJ,kBAAU,aAAa,UAAU,UAAU,SAAS,UAAU;AAAA,MAChE;AAAA,IACF,CAAC;AAED,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,sBAAsB,kBAAkB,UAAU;AACxD,YAAM,wBAAwB,kBAAkB,YAAY;AAE5D,aAAQ,WAAW,GAAG,aAAa,uBAAuB,MAAM;AAAA,QAC9D,UAAU,SAAS,MAAM;AAAA,UACvB;AAAA,QACF,CAAC;AAAA,QACD,SAAS,SAAS,MAAM;AAAA,UACtB,aAAa,qBAAqB,EAAE,MAAM,aAAa,GAAG;AAAA,YACxD,SAAS,SAAS,MAAM;AAAA,cACtB,aAAa,oBAAoB;AAAA,gBAC/B,MAAM,OAAO,QAAQ,8BAA8B;AAAA,gBACnD,OAAO;AAAA,gBACP,SAAS;AAAA,gBACT,cAAc;AAAA,gBACd,SAAS,OAAO,CAAC,MAAM,OAAO,CAAC,IAAI,CAAC,WAAiB,OAAO,QAAQ,CAAC,OAAO;AAAA,gBAC5E,OAAO;AAAA,cACT,GAAG,MAAM,GAAG,CAAC,MAAM,CAAC;AAAA,YACtB,CAAC;AAAA,YACD,GAAG;AAAA,UACL,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726169,
+      "end": 1720085726169,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726170,
+      "end": 1720085726171,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726171,
+      "end": 1720085726171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726171,
+      "end": 1720085726171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useColorMode } from '/home/a/serious_game/albers/node_modules/@nuxtjs/color-mode/dist/runtime/composables';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { computed } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ColorMode\",\n  setup(__props) {\n    const colorMode = useColorMode();\n    const isDark = computed({\n      get() {\n        return colorMode.value === \"dark\";\n      },\n      set() {\n        colorMode.preference = colorMode.value === \"dark\" ? \"light\" : \"dark\";\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Color Mode\" }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UButton, {\n                icon: isDark.value ? \"i-heroicons-moon-20-solid\" : \"i-heroicons-sun-20-solid\",\n                color: \"gray\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: _cache[0] || (_cache[0] = ($event) => isDark.value = !isDark.value),\n                class: \"rounded-full\"\n              }, null, 8, [\"icon\"])\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726173,
+      "end": 1720085726185,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/M,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726186,
+      "end": 1720085726186,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726188,
+      "end": 1720085726188,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726188,
+      "end": 1720085726188,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726188,
+      "end": 1720085726188,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/elements/Button.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Tooltip.vue\";\nimport { default as __nuxt_component_2 } from \"/home/a/serious_game/albers/node_modules/nuxt/dist/app/components/client-only\";\nimport { useColorMode } from '/home/a/serious_game/albers/node_modules/@nuxtjs/color-mode/dist/runtime/composables';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { computed } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ColorMode\",\n  setup(__props) {\n    const colorMode = useColorMode();\n    const isDark = computed({\n      get() {\n        return colorMode.value === \"dark\";\n      },\n      set() {\n        colorMode.preference = colorMode.value === \"dark\" ? \"light\" : \"dark\";\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UButton = __nuxt_component_0;\n      const _component_UTooltip = __nuxt_component_1;\n      const _component_ClientOnly = __nuxt_component_2;\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Color Mode\" }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UButton, {\n                icon: isDark.value ? \"i-heroicons-moon-20-solid\" : \"i-heroicons-sun-20-solid\",\n                color: \"gray\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: _cache[0] || (_cache[0] = ($event) => isDark.value = !isDark.value),\n                class: \"rounded-full\"\n              }, null, 8, [\"icon\"])\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "normal"
+    }
+  ]
+}

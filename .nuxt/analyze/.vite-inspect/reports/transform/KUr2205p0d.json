@@ -1,0 +1,212 @@
+{
+  "resolvedId": "virtual:nuxt:/home/a/serious_game/albers/.nuxt/routes.mjs",
+  "transforms": [
+    {
+      "name": "virtual",
+      "result": "import { default as _91xrplAddress_93w3hriDxdtKMeta } from \"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?macro=true\";\nimport { default as indexa2TYGh6C5FMeta } from \"/home/a/serious_game/albers/pages/albers/index.vue?macro=true\";\nimport { default as mintm0lmNiQBWEMeta } from \"/home/a/serious_game/albers/pages/albers/mint.vue?macro=true\";\nimport { default as indexFyd17fATT3Meta } from \"/home/a/serious_game/albers/pages/index.vue?macro=true\";\nimport { default as routeswS2lKADHJfMeta } from \"/home/a/serious_game/albers/pages/routes.vue?macro=true\";\nimport { default as index5CgeA0kZWgMeta } from \"/home/a/serious_game/albers/pages/toto/index.vue?macro=true\";\nexport default [\n  {\n    name: _91xrplAddress_93w3hriDxdtKMeta?.name ?? \"albers-xrplAddress\",\n    path: _91xrplAddress_93w3hriDxdtKMeta?.path ?? \"/albers/:xrplAddress()\",\n    meta: _91xrplAddress_93w3hriDxdtKMeta || {},\n    alias: _91xrplAddress_93w3hriDxdtKMeta?.alias || [],\n    redirect: _91xrplAddress_93w3hriDxdtKMeta?.redirect,\n    component: () => import(\"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue\").then(m => m.default || m)\n  },\n  {\n    name: indexa2TYGh6C5FMeta?.name ?? \"albers\",\n    path: indexa2TYGh6C5FMeta?.path ?? \"/albers\",\n    meta: indexa2TYGh6C5FMeta || {},\n    alias: indexa2TYGh6C5FMeta?.alias || [],\n    redirect: indexa2TYGh6C5FMeta?.redirect,\n    component: () => import(\"/home/a/serious_game/albers/pages/albers/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: mintm0lmNiQBWEMeta?.name ?? \"albers-mint\",\n    path: mintm0lmNiQBWEMeta?.path ?? \"/albers/mint\",\n    meta: mintm0lmNiQBWEMeta || {},\n    alias: mintm0lmNiQBWEMeta?.alias || [],\n    redirect: mintm0lmNiQBWEMeta?.redirect,\n    component: () => import(\"/home/a/serious_game/albers/pages/albers/mint.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexFyd17fATT3Meta?.name ?? \"index\",\n    path: indexFyd17fATT3Meta?.path ?? \"/\",\n    meta: indexFyd17fATT3Meta || {},\n    alias: indexFyd17fATT3Meta?.alias || [],\n    redirect: indexFyd17fATT3Meta?.redirect,\n    component: () => import(\"/home/a/serious_game/albers/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: routeswS2lKADHJfMeta?.name ?? \"routes\",\n    path: routeswS2lKADHJfMeta?.path ?? \"/routes\",\n    meta: routeswS2lKADHJfMeta || {},\n    alias: routeswS2lKADHJfMeta?.alias || [],\n    redirect: routeswS2lKADHJfMeta?.redirect,\n    component: () => import(\"/home/a/serious_game/albers/pages/routes.vue\").then(m => m.default || m)\n  },\n  {\n    name: index5CgeA0kZWgMeta?.name ?? \"toto\",\n    path: index5CgeA0kZWgMeta?.path ?? \"/toto\",\n    meta: index5CgeA0kZWgMeta || {},\n    alias: index5CgeA0kZWgMeta?.alias || [],\n    redirect: index5CgeA0kZWgMeta?.redirect,\n    component: () => import(\"/home/a/serious_game/albers/pages/toto/index.vue\").then(m => m.default || m)\n  }\n]",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085715954,
+      "end": 1720085715954,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085715954,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085715955,
+      "end": 1720085715955,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085715956,
+      "end": 1720085715956,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085715956,
+      "end": 1720085715958,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085715958,
+      "end": 1720085715958,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085715958,
+      "end": 1720085715958,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085715958,
+      "end": 1720085715958,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085715958,
+      "end": 1720085715958,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085715958,
+      "end": 1720085715958,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085715959,
+      "end": 1720085715959,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "result": "import { __vitePreload } from \"\u0000vite/preload-helper.js\";import { default as _91xrplAddress_93w3hriDxdtKMeta } from \"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?macro=true\";\nimport { default as indexa2TYGh6C5FMeta } from \"/home/a/serious_game/albers/pages/albers/index.vue?macro=true\";\nimport { default as mintm0lmNiQBWEMeta } from \"/home/a/serious_game/albers/pages/albers/mint.vue?macro=true\";\nimport { default as indexFyd17fATT3Meta } from \"/home/a/serious_game/albers/pages/index.vue?macro=true\";\nimport { default as routeswS2lKADHJfMeta } from \"/home/a/serious_game/albers/pages/routes.vue?macro=true\";\nimport { default as index5CgeA0kZWgMeta } from \"/home/a/serious_game/albers/pages/toto/index.vue?macro=true\";\nexport default [\n  {\n    name: _91xrplAddress_93w3hriDxdtKMeta?.name ?? \"albers-xrplAddress\",\n    path: _91xrplAddress_93w3hriDxdtKMeta?.path ?? \"/albers/:xrplAddress()\",\n    meta: _91xrplAddress_93w3hriDxdtKMeta || {},\n    alias: _91xrplAddress_93w3hriDxdtKMeta?.alias || [],\n    redirect: _91xrplAddress_93w3hriDxdtKMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexa2TYGh6C5FMeta?.name ?? \"albers\",\n    path: indexa2TYGh6C5FMeta?.path ?? \"/albers\",\n    meta: indexa2TYGh6C5FMeta || {},\n    alias: indexa2TYGh6C5FMeta?.alias || [],\n    redirect: indexa2TYGh6C5FMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/home/a/serious_game/albers/pages/albers/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: mintm0lmNiQBWEMeta?.name ?? \"albers-mint\",\n    path: mintm0lmNiQBWEMeta?.path ?? \"/albers/mint\",\n    meta: mintm0lmNiQBWEMeta || {},\n    alias: mintm0lmNiQBWEMeta?.alias || [],\n    redirect: mintm0lmNiQBWEMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/home/a/serious_game/albers/pages/albers/mint.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexFyd17fATT3Meta?.name ?? \"index\",\n    path: indexFyd17fATT3Meta?.path ?? \"/\",\n    meta: indexFyd17fATT3Meta || {},\n    alias: indexFyd17fATT3Meta?.alias || [],\n    redirect: indexFyd17fATT3Meta?.redirect,\n    component: () => __vitePreload(() => import(\"/home/a/serious_game/albers/pages/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: routeswS2lKADHJfMeta?.name ?? \"routes\",\n    path: routeswS2lKADHJfMeta?.path ?? \"/routes\",\n    meta: routeswS2lKADHJfMeta || {},\n    alias: routeswS2lKADHJfMeta?.alias || [],\n    redirect: routeswS2lKADHJfMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/home/a/serious_game/albers/pages/routes.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: index5CgeA0kZWgMeta?.name ?? \"toto\",\n    path: index5CgeA0kZWgMeta?.path ?? \"/toto\",\n    meta: index5CgeA0kZWgMeta || {},\n    alias: index5CgeA0kZWgMeta?.alias || [],\n    redirect: index5CgeA0kZWgMeta?.redirect,\n    component: () => __vitePreload(() => import(\"/home/a/serious_game/albers/pages/toto/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  }\n]",
+      "start": 1720085715959,
+      "end": 1720085715959,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085715959,
+      "end": 1720085715959,
+      "order": "normal"
+    }
+  ]
+}

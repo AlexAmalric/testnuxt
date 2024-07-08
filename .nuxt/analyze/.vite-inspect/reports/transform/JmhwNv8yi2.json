@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Albers.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div v-if=\"!magSecret\">This view requires the mag secret.</div>\n  <template v-else>\n    <div>\n      <ClientOnly>\n\n        <canvas ref=\"canvas\" class=\"w-full scale-75 hidden\"></canvas>\n        <template v-if=\"albersURI\">\n          <figure class=\"max-w-lg\">\n            <img class=\"h-auto max-w-full rounded-lg\" :src=\"albersURI\" alt=\"image description\">\n          </figure>\n        </template>\n        <template v-else>\n          <USkeleton class=\"h-full w-full\" :ui=\"{ rounded: 'rounded-lg' }\" />\n        </template>\n      </ClientOnly>\n\n    </div>\n  </template>\n\n</template>\n\n<script setup lang=\"ts\">\nimport { computed, inject } from 'vue'\nimport API from '~/server/client'\nimport { sketch } from '~/sketches/xalbers'\nimport p5 from \"p5\"\nimport { useRoute } from 'vue-router'\n\nconst updateColors = inject('updateColors', () => { })\n\n// define xrplAddress \nconst props = defineProps({\n  xrplAddress: String\n})\n\nconst { query } = useRoute()\nconst forceSave = query?.force === 'save'\n\nconst emit = defineEmits(['loaded']);\n\nconst { xrplAddress } = props\nconsole.log('albers component', { xrplAddress })\n\n// authentication\nconst magSecret = inject('magSecret')\n\nconst canvas = ref(null)\n\nlet myp5: any = null\n\nconst albersURI = ref(null)\n\nonMounted(() => {\n  nextTick(async () => {\n\n    myp5 = new p5(sketch({\n      xrplAddress,\n      colorCallback: (sketchColors: any) => {\n        updateColors(sketchColors)\n      },\n      onLoaded: ({ imageData }) => {\n        onSketchLoaded({ myp5, imageData })\n      }\n    }), canvas.value)\n\n    console.log(canvas.value)\n\n  })\n})\n\nconst onSketchLoaded = async ({ myp5, imageData }: { myp5: any, imageData: string }) => {\n  // let imageData = myp5.canvas.toDataURL() // Defaults to PNG format\n  console.log({ myp5, imageData })\n  // check if the url exists\n  const imageExists = await API.albersURLExists({ xrplAddress })\n  console.log({ imageExists })\n  if ((imageExists === true) && !forceSave) {\n    console.log(`Image for ${xrplAddress} existed`)\n    albersURI.value = `https://albers.fra1.cdn.digitaloceanspaces.com/alberx-${xrplAddress}.webp`\n  } else {\n    // if it doesn't then run through the creation flow\n    const { url } = await API.createAlbersURL({\n      xrplAddress,\n      imageData\n    })\n    albersURI.value = url\n    console.log({ url })\n  }\n  console.log('should emit', { url: albersURI.value })\n  emit('loaded', { url: albersURI.value })\n}\nonUnmounted(() => {\n  if (myp5) {\n    myp5.remove()\n  }\n});\n\n</script>\n<style>\ncanvas {\n  display: block;\n  /* Changes the default display to block, which removes extra space beneath the canvas typical of inline elements */\n  max-width: 100%;\n  /* Sets the maximum width to 100% of the parent element, preventing the canvas from exceeding the width of the viewport */\n  max-height: 100vh;\n  /* Sets the maximum height to 100% of the viewport height, preventing the canvas from exceeding the height of the viewport */\n  width: auto;\n  /* Allows the width of the canvas to be automatically adjusted while maintaining the aspect ratio */\n  height: auto;\n  /* Allows the height of the canvas to be automatically adjusted while maintaining the aspect ratio */\n  object-fit: contain;\n  /* Ensures that the canvas content is scaled correctly to fit within its box while preserving aspect ratio. The entire canvas is visible, but it may be letterboxed if its aspect ratio differs from its container. */\n}\n</style>",
+      "start": 1720085726297,
+      "end": 1720085726394,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/a/serious_game/albers/components/Albers.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/a/serious_game/albers/components/Albers.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/home/a/serious_game/albers/components/Albers.vue?vue&type=style&index=0&lang.css\";\nexport default _sfc_main;\n",
+      "start": 1720085726394,
+      "end": 1720085726426,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726432,
+      "end": 1720085726432,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726432,
+      "end": 1720085726432,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726433,
+      "end": 1720085726434,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726434,
+      "end": 1720085726434,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726435,
+      "end": 1720085726435,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726436,
+      "end": 1720085726437,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726437,
+      "end": 1720085726437,
+      "order": "normal"
+    }
+  ]
+}

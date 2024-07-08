@@ -1,0 +1,1 @@
+@keyframes growAndMove{0%,to{transform:translate(150px,150px) scale(1) rotate(0)}50%{transform:translate(300px,300px) scale(2) rotate(1turn)}}.animatedDiv{animation:growAndMove 150s infinite alternate;position:relative}

@@ -1,0 +1,231 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/QRCodeModal.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"font-title mb-4\" }, \"Connect to your wallet\", -1)\nconst _hoisted_2 = { class: \"flex justify-center\" }\nconst _hoisted_3 = [\"src\"]\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"font-title mt-4\" }, [\n  /*#__PURE__*/_createElementVNode(\"p\", null, \"Scan with Xaman or click the image to copy code manually.\")\n], -1)\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'QRCodeModal',\n  props: ['isOpen', 'qrCodeSrc', 'mobileUrl', 'uuid'],\n  setup(__props) {\n\nconst router = useRouter()\nconst props = __props\nconst {\n  qrCodeSrc,\n  isConnection,\n  mobileUrl,\n  uuid\n} = toRefs(props)\n\nconst closeModal = () => {\n  this.$emit('close');\n}\nconst onImageClick = async () => {\n  if (mobileUrl.value) {\n    window.open(mobileUrl.value, '_blank')\n  } else {\n    try {\n      await navigator.clipboard.writeText(value)\n      console.log('Text copied to clipboard')\n      alert(\"Copied to clipboard. Paste in Xaman to continue.\")\n    } catch (err) {\n      console.error('Failed to copy: ', err);\n      // Optionally, fallback to another copy method or show an error message.\n    }\n  }\n}\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UCard = _resolveComponent(\"UCard\")!\n  const _component_UModal = _resolveComponent(\"UModal\")!\n\n  return (_openBlock(), _createBlock(_component_UModal, { class: \"\" }, {\n    default: _withCtx(() => [\n      _createVNode(_component_UCard, {\n        ui: { ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' },\n        class: \"text-center\"\n      }, {\n        default: _withCtx(() => [\n          _hoisted_1,\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"img\", {\n              src: _unref(qrCodeSrc),\n              alt: \"QR Code (click to copy)\",\n              class: \"rounded-md\",\n              onClick: _cache[0] || (_cache[0] = ($event: any) => (onImageClick()))\n            }, null, 8, _hoisted_3)\n          ]),\n          _hoisted_4\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720085726641,
+      "end": 1720085726641
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"font-title mb-4\" }, \"Connect to your wallet\", -1);\nconst _hoisted_2 = { class: \"flex justify-center\" };\nconst _hoisted_3 = [\"src\"];\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"font-title mt-4\" }, [\n  /* @__PURE__ */ _createElementVNode(\"p\", null, \"Scan with Xaman or click the image to copy code manually.\")\n], -1);\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"QRCodeModal\",\n  props: [\"isOpen\", \"qrCodeSrc\", \"mobileUrl\", \"uuid\"],\n  setup(__props) {\n    const router = useRouter();\n    const props = __props;\n    const {\n      qrCodeSrc,\n      isConnection,\n      mobileUrl,\n      uuid\n    } = toRefs(props);\n    const closeModal = () => {\n      this.$emit(\"close\");\n    };\n    const onImageClick = async () => {\n      if (mobileUrl.value) {\n        window.open(mobileUrl.value, \"_blank\");\n      } else {\n        try {\n          await navigator.clipboard.writeText(value);\n          console.log(\"Text copied to clipboard\");\n          alert(\"Copied to clipboard. Paste in Xaman to continue.\");\n        } catch (err) {\n          console.error(\"Failed to copy: \", err);\n        }\n      }\n    };\n    return (_ctx, _cache) => {\n      const _component_UCard = _resolveComponent(\"UCard\");\n      const _component_UModal = _resolveComponent(\"UModal\");\n      return _openBlock(), _createBlock(_component_UModal, { class: \"\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UCard, {\n            ui: { ring: \"\", divide: \"divide-y divide-gray-100 dark:divide-gray-800\" },\n            class: \"text-center\"\n          }, {\n            default: _withCtx(() => [\n              _hoisted_1,\n              _createElementVNode(\"div\", _hoisted_2, [\n                _createElementVNode(\"img\", {\n                  src: _unref(qrCodeSrc),\n                  alt: \"QR Code (click to copy)\",\n                  class: \"rounded-md\",\n                  onClick: _cache[0] || (_cache[0] = ($event) => onImageClick())\n                }, null, 8, _hoisted_3)\n              ]),\n              _hoisted_4\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726641,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/QRCodeModal.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"font-title mb-4\" }, \"Connect to your wallet\", -1)\nconst _hoisted_2 = { class: \"flex justify-center\" }\nconst _hoisted_3 = [\"src\"]\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"font-title mt-4\" }, [\n  /*#__PURE__*/_createElementVNode(\"p\", null, \"Scan with Xaman or click the image to copy code manually.\")\n], -1)\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'QRCodeModal',\n  props: ['isOpen', 'qrCodeSrc', 'mobileUrl', 'uuid'],\n  setup(__props) {\n\nconst router = useRouter()\nconst props = __props\nconst {\n  qrCodeSrc,\n  isConnection,\n  mobileUrl,\n  uuid\n} = toRefs(props)\n\nconst closeModal = () => {\n  this.$emit('close');\n}\nconst onImageClick = async () => {\n  if (mobileUrl.value) {\n    window.open(mobileUrl.value, '_blank')\n  } else {\n    try {\n      await navigator.clipboard.writeText(value)\n      console.log('Text copied to clipboard')\n      alert(\"Copied to clipboard. Paste in Xaman to continue.\")\n    } catch (err) {\n      console.error('Failed to copy: ', err);\n      // Optionally, fallback to another copy method or show an error message.\n    }\n  }\n}\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UCard = _resolveComponent(\"UCard\")!\n  const _component_UModal = _resolveComponent(\"UModal\")!\n\n  return (_openBlock(), _createBlock(_component_UModal, { class: \"\" }, {\n    default: _withCtx(() => [\n      _createVNode(_component_UCard, {\n        ui: { ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' },\n        class: \"text-center\"\n      }, {\n        default: _withCtx(() => [\n          _hoisted_1,\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"img\", {\n              src: _unref(qrCodeSrc),\n              alt: \"QR Code (click to copy)\",\n              class: \"rounded-md\",\n              onClick: _cache[0] || (_cache[0] = ($event: any) => (onImageClick()))\n            }, null, 8, _hoisted_3)\n          ]),\n          _hoisted_4\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,sBAAsB,qBAAqB,SAAS,QAAQ,oBAAoB,mBAAmB,WAAW,UAAU,eAAe,cAAc,aAAa,YAAY,eAAe,oBAAoB;AAE1N,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,kBAAkB,GAAG,0BAA0B,EAAE;AACrH,MAAM,aAAa,EAAE,OAAO,sBAAsB;AAClD,MAAM,aAAa,CAAC,KAAK;AACzB,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,kBAAkB,GAAG;AAAA,EAC1E,oCAAoB,KAAK,MAAM,2DAA2D;AACzG,GAAG,EAAE;AAGL,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO,CAAC,UAAU,aAAa,aAAa,MAAM;AAAA,EAClD,MAAM,SAAS;AAEjB,UAAM,SAAS,UAAU;AACzB,UAAM,QAAQ;AACd,UAAM;AAAA,MACJ;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,IACF,IAAI,OAAO,KAAK;AAEhB,UAAM,aAAa,MAAM;AACvB,WAAK,MAAM,OAAO;AAAA,IACpB;AACA,UAAM,eAAe,YAAY;AAC/B,UAAI,UAAU,OAAO;AACnB,eAAO,KAAK,UAAU,OAAO,QAAQ;AAAA,MACvC,OAAO;AACL,YAAI;AACF,gBAAM,UAAU,UAAU,UAAU,KAAK;AACzC,kBAAQ,IAAI,0BAA0B;AACtC,gBAAM,kDAAkD;AAAA,QAC1D,SAAS,KAAK;AACZ,kBAAQ,MAAM,oBAAoB,GAAG;AAAA,QAEvC;AAAA,MACF;AAAA,IACF;AAEA,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,mBAAmB,kBAAkB,OAAO;AAClD,YAAM,oBAAoB,kBAAkB,QAAQ;AAEpD,aAAQ,WAAW,GAAG,aAAa,mBAAmB,EAAE,OAAO,GAAG,GAAG;AAAA,QACnE,SAAS,SAAS,MAAM;AAAA,UACtB,aAAa,kBAAkB;AAAA,YAC7B,IAAI,EAAE,MAAM,IAAI,QAAQ,gDAAgD;AAAA,YACxE,OAAO;AAAA,UACT,GAAG;AAAA,YACD,SAAS,SAAS,MAAM;AAAA,cACtB;AAAA,cACA,oBAAoB,OAAO,YAAY;AAAA,gBACrC,oBAAoB,OAAO;AAAA,kBACzB,KAAK,OAAO,SAAS;AAAA,kBACrB,KAAK;AAAA,kBACL,OAAO;AAAA,kBACP,SAAS,OAAO,CAAC,MAAM,OAAO,CAAC,IAAI,CAAC,WAAiB,aAAa;AAAA,gBACpE,GAAG,MAAM,GAAG,UAAU;AAAA,cACxB,CAAC;AAAA,cACD;AAAA,YACF,CAAC;AAAA,YACD,GAAG;AAAA,UACL,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726654,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726656,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useRouter } from '#app/composables/router';\nimport { toRefs } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"font-title mb-4\" }, \"Connect to your wallet\", -1);\nconst _hoisted_2 = { class: \"flex justify-center\" };\nconst _hoisted_3 = [\"src\"];\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"font-title mt-4\" }, [\n  /* @__PURE__ */ _createElementVNode(\"p\", null, \"Scan with Xaman or click the image to copy code manually.\")\n], -1);\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"QRCodeModal\",\n  props: [\"isOpen\", \"qrCodeSrc\", \"mobileUrl\", \"uuid\"],\n  setup(__props) {\n    const router = useRouter();\n    const props = __props;\n    const {\n      qrCodeSrc,\n      isConnection,\n      mobileUrl,\n      uuid\n    } = toRefs(props);\n    const closeModal = () => {\n      this.$emit(\"close\");\n    };\n    const onImageClick = async () => {\n      if (mobileUrl.value) {\n        window.open(mobileUrl.value, \"_blank\");\n      } else {\n        try {\n          await navigator.clipboard.writeText(value);\n          console.log(\"Text copied to clipboard\");\n          alert(\"Copied to clipboard. Paste in Xaman to continue.\");\n        } catch (err) {\n          console.error(\"Failed to copy: \", err);\n        }\n      }\n    };\n    return (_ctx, _cache) => {\n      const _component_UCard = _resolveComponent(\"UCard\");\n      const _component_UModal = _resolveComponent(\"UModal\");\n      return _openBlock(), _createBlock(_component_UModal, { class: \"\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UCard, {\n            ui: { ring: \"\", divide: \"divide-y divide-gray-100 dark:divide-gray-800\" },\n            class: \"text-center\"\n          }, {\n            default: _withCtx(() => [\n              _hoisted_1,\n              _createElementVNode(\"div\", _hoisted_2, [\n                _createElementVNode(\"img\", {\n                  src: _unref(qrCodeSrc),\n                  alt: \"QR Code (click to copy)\",\n                  class: \"rounded-md\",\n                  onClick: _cache[0] || (_cache[0] = ($event) => onImageClick())\n                }, null, 8, _hoisted_3)\n              ]),\n              _hoisted_4\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726657,
+      "end": 1720085726667,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";;AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChO,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1H,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7G,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/layout/Card.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Modal.vue\";\nimport { useRouter } from '#app/composables/router';\nimport { toRefs } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, unref as _unref, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"font-title mb-4\" }, \"Connect to your wallet\", -1);\nconst _hoisted_2 = { class: \"flex justify-center\" };\nconst _hoisted_3 = [\"src\"];\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"font-title mt-4\" }, [\n  /* @__PURE__ */ _createElementVNode(\"p\", null, \"Scan with Xaman or click the image to copy code manually.\")\n], -1);\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"QRCodeModal\",\n  props: [\"isOpen\", \"qrCodeSrc\", \"mobileUrl\", \"uuid\"],\n  setup(__props) {\n    const router = useRouter();\n    const props = __props;\n    const {\n      qrCodeSrc,\n      isConnection,\n      mobileUrl,\n      uuid\n    } = toRefs(props);\n    const closeModal = () => {\n      this.$emit(\"close\");\n    };\n    const onImageClick = async () => {\n      if (mobileUrl.value) {\n        window.open(mobileUrl.value, \"_blank\");\n      } else {\n        try {\n          await navigator.clipboard.writeText(value);\n          console.log(\"Text copied to clipboard\");\n          alert(\"Copied to clipboard. Paste in Xaman to continue.\");\n        } catch (err) {\n          console.error(\"Failed to copy: \", err);\n        }\n      }\n    };\n    return (_ctx, _cache) => {\n      const _component_UCard = __nuxt_component_0;\n      const _component_UModal = __nuxt_component_1;\n      return _openBlock(), _createBlock(_component_UModal, { class: \"\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UCard, {\n            ui: { ring: \"\", divide: \"divide-y divide-gray-100 dark:divide-gray-800\" },\n            class: \"text-center\"\n          }, {\n            default: _withCtx(() => [\n              _hoisted_1,\n              _createElementVNode(\"div\", _hoisted_2, [\n                _createElementVNode(\"img\", {\n                  src: _unref(qrCodeSrc),\n                  alt: \"QR Code (click to copy)\",\n                  class: \"rounded-md\",\n                  onClick: _cache[0] || (_cache[0] = ($event) => onImageClick())\n                }, null, 8, _hoisted_3)\n              ]),\n              _hoisted_4\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726669,
+      "end": 1720085726669,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726670,
+      "end": 1720085726671,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726671,
+      "end": 1720085726671,
+      "order": "normal"
+    }
+  ]
+}

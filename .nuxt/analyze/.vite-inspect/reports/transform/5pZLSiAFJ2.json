@@ -1,0 +1,221 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Albers.vue?vue&type=style&index=0&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\ncanvas {\n  display: block;\n  /* Changes the default display to block, which removes extra space beneath the canvas typical of inline elements */\n  max-width: 100%;\n  /* Sets the maximum width to 100% of the parent element, preventing the canvas from exceeding the width of the viewport */\n  max-height: 100vh;\n  /* Sets the maximum height to 100% of the viewport height, preventing the canvas from exceeding the height of the viewport */\n  width: auto;\n  /* Allows the width of the canvas to be automatically adjusted while maintaining the aspect ratio */\n  height: auto;\n  /* Allows the height of the canvas to be automatically adjusted while maintaining the aspect ratio */\n  object-fit: contain;\n  /* Ensures that the canvas content is scaled correctly to fit within its box while preserving aspect ratio. The entire canvas is visible, but it may be letterboxed if its aspect ratio differs from its container. */\n}\n",
+      "start": 1720085726573,
+      "end": 1720085726573
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726573,
+      "end": 1720085726573,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726573,
+      "end": 1720085726573,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726573,
+      "end": 1720085726573,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "canvas{display:block;height:auto;max-height:100vh;max-width:100%;-o-object-fit:contain;object-fit:contain;width:auto}",
+      "start": 1720085726573,
+      "end": 1720085726637,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085726637,
+      "end": 1720085726637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726637,
+      "end": 1720085726637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726637,
+      "end": 1720085726637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "canvas{display:block;height:auto;max-height:100vh;max-width:100%;-o-object-fit:contain;object-fit:contain;width:auto}",
+      "start": 1720085726637,
+      "end": 1720085726638,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726638,
+      "end": 1720085726638,
+      "order": "normal"
+    }
+  ]
+}

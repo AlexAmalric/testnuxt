@@ -1,0 +1,223 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/pages/routes.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div>\n    <div class=\"header\">\n      <h1>Routes overview</h1>\n      <nuxt-link to=\"/\">Go back to index</nuxt-link>\n    </div>\n    <div class=\"info\">\n      <h1>There are {{ $router.options.routes.length }} available routes by nuxtjs</h1>\n    </div>\n    <div class=\"wrapper\">\n      <table id=\"routes\">\n        <tr>\n          <th class=\"text-lg text-center\">route.name</th>\n          <th class=\"text-lg text-center\">route.path</th>\n        </tr>\n        <tr v-for=\"route in $router.options.routes\">\n          <td>\n            <nuxt-link :to=\"route.path\">{{ route.name }}</nuxt-link>\n          </td>\n          <td>\n            <nuxt-link :to=\"route.path\">{{ route.path }}</nuxt-link>\n          </td>\n        </tr>\n      </table>\n    </div>\n  </div>\n</template>\n<script>\nexport default {\n  layout: \"routes\"\n}\n</script>\n<style>\n.header {\n  padding: 30px;\n  background-color: rgba(5, 150, 105, 1);\n}\n\n.header h1 {\n  color: white;\n  font-size: 2rem;\n}\n\n.header a {\n  color: white;\n  font-size: 1rem;\n  text-decoration: underline;\n}\n\n.info {\n  padding: 30px;\n}\n\n.info h1 {\n  font-size: 1.2rem;\n}\n\n.wrapper {\n  margin: 0 15px;\n}\n\n#routes {\n  border-collapse: collapse;\n  width: 100%;\n}\n\n#routes td,\n#routes th {\n  border: 1px solid #ddd;\n  padding: 8px;\n}\n\n#routes tr:nth-child(even) {\n  background-color: #f2f2f2;\n}\n\n#routes tr:hover {\n  background-color: #ddd;\n}\n\n#routes th {\n  background-color: rgba(5, 150, 105, 1);\n  padding-top: 12px;\n  padding-bottom: 12px;\n  text-align: left;\n  color: white;\n}</style>",
+      "start": 1720085720566,
+      "end": 1720085724605,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085724605,
+      "end": 1720085724605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nconst _sfc_main = {\n  layout: \"routes\"\n}\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, toDisplayString as _toDisplayString, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"header\" }\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"h1\", null, \"Routes overview\", -1)\nconst _hoisted_3 = { class: \"info\" }\nconst _hoisted_4 = { class: \"wrapper\" }\nconst _hoisted_5 = { id: \"routes\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"tr\", null, [\n  /*#__PURE__*/_createElementVNode(\"th\", { class: \"text-lg text-center\" }, \"route.name\"),\n  /*#__PURE__*/_createElementVNode(\"th\", { class: \"text-lg text-center\" }, \"route.path\")\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _hoisted_2,\n      _createVNode(_component_nuxt_link, { to: \"/\" }, {\n        default: _withCtx(() => [\n          _createTextVNode(\"Go back to index\")\n        ]),\n        _: 1\n      })\n    ]),\n    _createElementVNode(\"div\", _hoisted_3, [\n      _createElementVNode(\"h1\", null, \"There are \" + _toDisplayString(_ctx.$router.options.routes.length) + \" available routes by nuxtjs\", 1)\n    ]),\n    _createElementVNode(\"div\", _hoisted_4, [\n      _createElementVNode(\"table\", _hoisted_5, [\n        _hoisted_6,\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_ctx.$router.options.routes, (route) => {\n          return (_openBlock(), _createElementBlock(\"tr\", null, [\n            _createElementVNode(\"td\", null, [\n              _createVNode(_component_nuxt_link, {\n                to: route.path\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(_toDisplayString(route.name), 1)\n                ]),\n                _: 2\n              }, 1032, [\"to\"])\n            ]),\n            _createElementVNode(\"td\", null, [\n              _createVNode(_component_nuxt_link, {\n                to: route.path\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(_toDisplayString(route.path), 1)\n                ]),\n                _: 2\n              }, 1032, [\"to\"])\n            ])\n          ]))\n        }), 256))\n      ])\n    ])\n  ]))\n}\n\nimport \"/home/a/serious_game/albers/pages/routes.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1720085724605,
+      "end": 1720085724613,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085724613,
+      "end": 1720085724613,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085724613,
+      "end": 1720085724615,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085724615,
+      "end": 1720085724616,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1720085724616,
+      "end": 1720085724617,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085724617,
+      "end": 1720085724617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085724617,
+      "end": 1720085724617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085724617,
+      "end": 1720085724617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085724617,
+      "end": 1720085724617,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085724617,
+      "end": 1720085724617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085724617,
+      "end": 1720085724617,
+      "order": "normal"
+    }
+  ]
+}

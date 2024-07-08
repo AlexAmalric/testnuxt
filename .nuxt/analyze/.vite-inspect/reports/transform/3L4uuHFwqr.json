@@ -1,0 +1,222 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/ShareOnX.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ShareOnX',\n  setup(__props) {\n\nfunction shareOnX() {\n  const breaks = \"%0A\";\n  const text1 = encodeURIComponent(\"I cracked the code in the latest XRPL Community Mag and won an Albers inspired generative art NFT!\");\n  const text2 = encodeURIComponent(\"Check it out at: https://mag.xrpl.quest\");\n  const text3 = encodeURIComponent(\"Claim your own: https://xrpl.at/commons-mag-02\");\n\n  const hashtags = \"NFT,XRPL\";\n  const via = \"xrpl_commons\";\n  const twitterUrl = `https://twitter.com/intent/tweet?text=${text1}${breaks}${text2}${breaks}${breaks}${text3}${breaks}${breaks}&hashtags=${hashtags}&via=${via}`;\n  window.open(twitterUrl, '_blank');\n}\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n\n  return (_openBlock(), _createBlock(_component_UButton, {\n    onClick: shareOnX,\n    color: \"blue\",\n    class: \"mb-2\"\n  }, {\n    default: _withCtx(() => [\n      _createTextVNode(\"Share on X\")\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720085726641,
+      "end": 1720085726641
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726641,
+      "end": 1720085726641,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ShareOnX\",\n  setup(__props) {\n    function shareOnX() {\n      const breaks = \"%0A\";\n      const text1 = encodeURIComponent(\"I cracked the code in the latest XRPL Community Mag and won an Albers inspired generative art NFT!\");\n      const text2 = encodeURIComponent(\"Check it out at: https://mag.xrpl.quest\");\n      const text3 = encodeURIComponent(\"Claim your own: https://xrpl.at/commons-mag-02\");\n      const hashtags = \"NFT,XRPL\";\n      const via = \"xrpl_commons\";\n      const twitterUrl = `https://twitter.com/intent/tweet?text=${text1}${breaks}${text2}${breaks}${breaks}${text3}${breaks}${breaks}&hashtags=${hashtags}&via=${via}`;\n      window.open(twitterUrl, \"_blank\");\n    }\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      return _openBlock(), _createBlock(_component_UButton, {\n        onClick: shareOnX,\n        color: \"blue\",\n        class: \"mb-2\"\n      }, {\n        default: _withCtx(() => [\n          _createTextVNode(\"Share on X\")\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726641,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/ShareOnX.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ShareOnX',\n  setup(__props) {\n\nfunction shareOnX() {\n  const breaks = \"%0A\";\n  const text1 = encodeURIComponent(\"I cracked the code in the latest XRPL Community Mag and won an Albers inspired generative art NFT!\");\n  const text2 = encodeURIComponent(\"Check it out at: https://mag.xrpl.quest\");\n  const text3 = encodeURIComponent(\"Claim your own: https://xrpl.at/commons-mag-02\");\n\n  const hashtags = \"NFT,XRPL\";\n  const via = \"xrpl_commons\";\n  const twitterUrl = `https://twitter.com/intent/tweet?text=${text1}${breaks}${text2}${breaks}${breaks}${text3}${breaks}${breaks}&hashtags=${hashtags}&via=${via}`;\n  window.open(twitterUrl, '_blank');\n}\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n\n  return (_openBlock(), _createBlock(_component_UButton, {\n    onClick: shareOnX,\n    color: \"blue\",\n    class: \"mb-2\"\n  }, {\n    default: _withCtx(() => [\n      _createTextVNode(\"Share on X\")\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,mBAAmB,kBAAkB,oBAAoB,mBAAmB,WAAW,UAAU,aAAa,YAAY,eAAe,oBAAoB;AAGtK,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,aAAS,WAAW;AAClB,YAAM,SAAS;AACf,YAAM,QAAQ,mBAAmB,oGAAoG;AACrI,YAAM,QAAQ,mBAAmB,yCAAyC;AAC1E,YAAM,QAAQ,mBAAmB,gDAAgD;AAEjF,YAAM,WAAW;AACjB,YAAM,MAAM;AACZ,YAAM,aAAa,yCAAyC,KAAK,GAAG,MAAM,GAAG,KAAK,GAAG,MAAM,GAAG,MAAM,GAAG,KAAK,GAAG,MAAM,GAAG,MAAM,aAAa,QAAQ,QAAQ,GAAG;AAC9J,aAAO,KAAK,YAAY,QAAQ;AAAA,IAClC;AAEA,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,aAAa,oBAAoB;AAAA,QACrD,SAAS;AAAA,QACT,OAAO;AAAA,QACP,OAAO;AAAA,MACT,GAAG;AAAA,QACD,SAAS,SAAS,MAAM;AAAA,UACtB,iBAAiB,YAAY;AAAA,QAC/B,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726654,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726656,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726657,
+      "end": 1720085726665,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/elements/Button.vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ShareOnX\",\n  setup(__props) {\n    function shareOnX() {\n      const breaks = \"%0A\";\n      const text1 = encodeURIComponent(\"I cracked the code in the latest XRPL Community Mag and won an Albers inspired generative art NFT!\");\n      const text2 = encodeURIComponent(\"Check it out at: https://mag.xrpl.quest\");\n      const text3 = encodeURIComponent(\"Claim your own: https://xrpl.at/commons-mag-02\");\n      const hashtags = \"NFT,XRPL\";\n      const via = \"xrpl_commons\";\n      const twitterUrl = `https://twitter.com/intent/tweet?text=${text1}${breaks}${text2}${breaks}${breaks}${text3}${breaks}${breaks}&hashtags=${hashtags}&via=${via}`;\n      window.open(twitterUrl, \"_blank\");\n    }\n    return (_ctx, _cache) => {\n      const _component_UButton = __nuxt_component_0;\n      return _openBlock(), _createBlock(_component_UButton, {\n        onClick: shareOnX,\n        color: \"blue\",\n        class: \"mb-2\"\n      }, {\n        default: _withCtx(() => [\n          _createTextVNode(\"Share on X\")\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726669,
+      "end": 1720085726669,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726671,
+      "end": 1720085726671,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div v-if=\"!magSecret\">This page requires the mag secret.</div>\n  <template v-else>\n    <div class=\"text-center\">\n      <div class=\"text-center font-title text-lg\" v-if=\"nft?.rank\">Rank #{{ nft?.rank }}</div>\n      <div class=\"inline-block\">\n        <albers :xrpl-address=\"xrplAddress\" @loaded=\"onImageLoaded\" />\n      </div>\n\n    </div>\n  </template>\n</template>\n\n<script setup lang=\"ts\">\nimport { ref, computed, onMounted, inject } from \"vue\"\nimport { useRoute } from 'vue-router'\n/* @ts-ignore */\nimport API from '~/server/client'\n\n/* @ts-ignore */\ndefinePageMeta({\n  layout: 'fullscreen'\n})\n\n\nconst { params } = useRoute()\nconst xrplAddress = computed(() => params.xrplAddress || 'rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh')\nconst network: any = inject('network')\n\n// authentication\nconst magSecret = inject('magSecret')\n\nconst nft: any = ref(null)\n\nonMounted(async () => {\n  const nfts = await API.getNFTs({ xrplAddress: xrplAddress.value, network: network.value })\n  if (nfts && nfts.length > 0) {\n    nft.value = nfts[0]\n  }\n})\n\nconst twitterUrl = ref('')\n\nconst onImageLoaded = ({ url }) => {\n  console.log('onImageLoaded', url)\n  twitterUrl.value = url\n}\n\n/* @ts-ignore */\nuseHead({\n  title: 'Community Mag Quest',\n  meta: [\n    { name: 'description', content: 'A unique Albers inspired generative art NFT based on your xrpl address.' },\n    { name: 'twitter:card', content: 'summary_large_image' },\n    { name: 'twitter:site', content: '@xrpl_commons' },\n    { name: 'twitter:title', content: 'Community Mag Quest' },\n    { name: 'twitter:description', content: 'A unique Albers inspired generative art NFT based on your xrpl address.' },\n    { name: 'twitter:creator', content: '@xrpl_commons' },\n    { name: 'twitter:image', content: `${twitterUrl.value}` },\n    { name: 'twitter:domain', content: 'xrpl-commons.org' }\n  ]\n})\n\n</script>\n<style>\ncanvas {\n  display: block;\n  /* Changes the default display to block, which removes extra space beneath the canvas typical of inline elements */\n  max-width: 100%;\n  /* Sets the maximum width to 100% of the parent element, preventing the canvas from exceeding the width of the viewport */\n  max-height: 100vh;\n  /* Sets the maximum height to 100% of the viewport height, preventing the canvas from exceeding the height of the viewport */\n  width: auto;\n  /* Allows the width of the canvas to be automatically adjusted while maintaining the aspect ratio */\n  height: auto;\n  /* Allows the height of the canvas to be automatically adjusted while maintaining the aspect ratio */\n  object-fit: contain;\n  /* Ensures that the canvas content is scaled correctly to fit within its box while preserving aspect ratio. The entire canvas is visible, but it may be letterboxed if its aspect ratio differs from its container. */\n}\n</style>",
+      "start": 1720085720560,
+      "end": 1720085724548,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085724548,
+      "end": 1720085724548,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?vue&type=script&setup=true&lang.ts\";\nimport \"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?vue&type=style&index=0&lang.css\";\nexport default _sfc_main;\n",
+      "start": 1720085724548,
+      "end": 1720085725361,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085725361,
+      "end": 1720085725361,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085725361,
+      "end": 1720085725362,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085725362,
+      "end": 1720085725362,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085725362,
+      "end": 1720085725362,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085725367,
+      "end": 1720085725367,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085725368,
+      "end": 1720085725368,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085725368,
+      "end": 1720085725368,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085725368,
+      "end": 1720085725368,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085725369,
+      "end": 1720085725369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085725369,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085725371,
+      "end": 1720085725371,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085725371,
+      "end": 1720085725374,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085725375,
+      "end": 1720085725375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "export { default } from \"/home/a/serious_game/albers/pages/albers/[xrplAddress].vue?macro=true&vue&type=script&setup=true&lang.ts\"",
+      "start": 1720085725376,
+      "end": 1720085725377,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085725377,
+      "end": 1720085725377,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085725377,
+      "end": 1720085725377,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085725377,
+      "end": 1720085725378,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085725378,
+      "end": 1720085725378,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085725378,
+      "end": 1720085725379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085725379,
+      "end": 1720085725379,
+      "order": "normal"
+    }
+  ]
+}

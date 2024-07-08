@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/layouts/default.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div\n    class=\"text-xl px-2 lg:px-4 py-1 w-full fixed top-0 left-0 z-20 border-transparent lg:block backdrop-blur-md bg-transparent dark:bg-transparent  text-gray-900 m-0 block\">\n    <div class=\"flex justify-between items-center content-center\">\n      <div class=\"flex justify-start items-center\">\n        <NuxtLink to=\"/\"\n          class=\" text-stratos-950 text-xl sm:text-3xl rounded-full px-0 py-1 font-title inline-flex items-center\">\n          <UTooltip text=\"Home\">\n            <div class=\"hover:scale-110 p-2 transition-all cursor-pointer flex justify-start items-center flex-auto \">\n              <img src=\"/xrpl.png\" class=\"h-8 opacity-80 hidden dark:block\" />\n              <img src=\"/xrplb.png\" class=\"h-8 opacity-80 dark:invisible dark:hidden\" />\n\n            </div>\n          </UTooltip>\n\n          <div class=\"ml-2 md:text-4xl text-lg font-title text-black dark:text-white\">Community Quest</div>\n        </NuxtLink>\n      </div>\n\n      <div class=\"pl-1 flex\">\n        <ColorMode />\n        <Network />\n        <Secret />\n      </div>\n    </div>\n  </div>\n  <ShapesBackground />\n\n  <div class=\"pt-20 pr-4 pl-4 sm:pr-4 sm:pl-4 relative overflow-auto\">\n    <div v-if=\"!magSecret\">This page requires the mag secret.</div>\n    <template v-else>\n      <slot />\n    </template>\n  </div>\n</template>\n\n<script lang=\"ts\" setup>\nimport { inject } from 'vue'\nimport { useRouter } from 'vue-router'\n\nconst router = useRouter()\n\n// authentication\nconst magSecret = inject('magSecret')\n//ref<string | null>(null)\n//magSecret.value = localStorage.getItem('mag_secret')\n\nonMounted(() => {\n  if (!magSecret.value) {\n    router.push('/')\n  }\n})\n</script>\n",
+      "start": 1720085720641,
+      "end": 1720085724637,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085724637,
+      "end": 1720085724637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/a/serious_game/albers/layouts/default.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/a/serious_game/albers/layouts/default.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
+      "start": 1720085724637,
+      "end": 1720085725361,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085725361,
+      "end": 1720085725361,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085725361,
+      "end": 1720085725362,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085725362,
+      "end": 1720085725362,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085725362,
+      "end": 1720085725362,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085725367,
+      "end": 1720085725367,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085725368,
+      "end": 1720085725368,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085725368,
+      "end": 1720085725368,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085725368,
+      "end": 1720085725368,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085725369,
+      "end": 1720085725369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085725369,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085725370,
+      "end": 1720085725370,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085725371,
+      "end": 1720085725371,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085725371,
+      "end": 1720085725374,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085725375,
+      "end": 1720085725375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085725376,
+      "end": 1720085725377,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085725377,
+      "end": 1720085725377,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085725377,
+      "end": 1720085725377,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085725378,
+      "end": 1720085725378,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085725378,
+      "end": 1720085725378,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085725378,
+      "end": 1720085725379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085725379,
+      "end": 1720085725379,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+declare module '#ui-colors' { const defaultExport: ["red","orange","amber","yellow","lime","green","emerald","teal","cyan","sky","blue","indigo","violet","purple","fuchsia","pink","rose","persian-rose","dodger-blue","spring-green","broom","electric-violet","stratos","logan","ecru-white","primary"]; export default defaultExport; }

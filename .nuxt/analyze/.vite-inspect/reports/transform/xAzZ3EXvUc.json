@@ -1,0 +1,222 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Network.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1)\n\nimport { computed, inject } from 'vue'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Network',\n  setup(__props) {\n\nconst network = inject('network')\nconst toggleNetwork = inject('toggleNetwork')\nconst isMainnet = computed(() => network.value === 'MAINNET')\n\nconst onClickNetwork = () => {\n  alert(`Switching to ${isMainnet.value ? 'Testnet' : 'Mainnet'}`)\n  toggleNetwork()\n  console.log('Network is now', network.value)\n}\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    fallback: _withCtx(() => [\n      _hoisted_1\n    ]),\n    default: _withCtx(() => [\n      _createVNode(_component_UTooltip, { text: \"Network settings\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UButton, {\n            icon: isMainnet.value ? 'i-heroicons-lock-closed-20-solid' : 'i-heroicons-lock-open-20-solid',\n            color: \"gray\",\n            variant: \"ghost\",\n            \"aria-label\": \"Theme\",\n            onClick: onClickNetwork,\n            class: \"rounded-full\"\n          }, null, 8, [\"icon\"])\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720085726639,
+      "end": 1720085726639
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { computed, inject } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Network\",\n  setup(__props) {\n    const network = inject(\"network\");\n    const toggleNetwork = inject(\"toggleNetwork\");\n    const isMainnet = computed(() => network.value === \"MAINNET\");\n    const onClickNetwork = () => {\n      alert(`Switching to ${isMainnet.value ? \"Testnet\" : \"Mainnet\"}`);\n      toggleNetwork();\n      console.log(\"Network is now\", network.value);\n    };\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Network settings\" }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UButton, {\n                icon: isMainnet.value ? \"i-heroicons-lock-closed-20-solid\" : \"i-heroicons-lock-open-20-solid\",\n                color: \"gray\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: onClickNetwork,\n                class: \"rounded-full\"\n              }, null, 8, [\"icon\"])\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726640,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/Network.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1)\n\nimport { computed, inject } from 'vue'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Network',\n  setup(__props) {\n\nconst network = inject('network')\nconst toggleNetwork = inject('toggleNetwork')\nconst isMainnet = computed(() => network.value === 'MAINNET')\n\nconst onClickNetwork = () => {\n  alert(`Switching to ${isMainnet.value ? 'Testnet' : 'Mainnet'}`)\n  toggleNetwork()\n  console.log('Network is now', network.value)\n}\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    fallback: _withCtx(() => [\n      _hoisted_1\n    ]),\n    default: _withCtx(() => [\n      _createVNode(_component_UTooltip, { text: \"Network settings\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_UButton, {\n            icon: isMainnet.value ? 'i-heroicons-lock-closed-20-solid' : 'i-heroicons-lock-open-20-solid',\n            color: \"gray\",\n            variant: \"ghost\",\n            \"aria-label\": \"Theme\",\n            onClick: onClickNetwork,\n            class: \"rounded-full\"\n          }, null, 8, [\"icon\"])\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAAmB,eAAe,cAAc,WAAW,UAAU,sBAAsB,qBAAqB,aAAa,YAAY,eAAe,oBAAoB;AAEzM,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,UAAU,GAAG,MAAM,EAAE;AAEzF,SAAS,UAAU,cAAc;AAGjC,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,UAAM,UAAU,OAAO,SAAS;AAChC,UAAM,gBAAgB,OAAO,eAAe;AAC5C,UAAM,YAAY,SAAS,MAAM,QAAQ,UAAU,SAAS;AAE5D,UAAM,iBAAiB,MAAM;AAC3B,YAAM,gBAAgB,UAAU,QAAQ,YAAY,SAAS,EAAE;AAC/D,oBAAc;AACd,cAAQ,IAAI,kBAAkB,QAAQ,KAAK;AAAA,IAC7C;AAGA,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,sBAAsB,kBAAkB,UAAU;AACxD,YAAM,wBAAwB,kBAAkB,YAAY;AAE5D,aAAQ,WAAW,GAAG,aAAa,uBAAuB,MAAM;AAAA,QAC9D,UAAU,SAAS,MAAM;AAAA,UACvB;AAAA,QACF,CAAC;AAAA,QACD,SAAS,SAAS,MAAM;AAAA,UACtB,aAAa,qBAAqB,EAAE,MAAM,mBAAmB,GAAG;AAAA,YAC9D,SAAS,SAAS,MAAM;AAAA,cACtB,aAAa,oBAAoB;AAAA,gBAC/B,MAAM,UAAU,QAAQ,qCAAqC;AAAA,gBAC7D,OAAO;AAAA,gBACP,SAAS;AAAA,gBACT,cAAc;AAAA,gBACd,SAAS;AAAA,gBACT,OAAO;AAAA,cACT,GAAG,MAAM,GAAG,CAAC,MAAM,CAAC;AAAA,YACtB,CAAC;AAAA,YACD,GAAG;AAAA,UACL,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726654,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726656,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726657,
+      "end": 1720085726665,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/elements/Button.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Tooltip.vue\";\nimport { default as __nuxt_component_2 } from \"/home/a/serious_game/albers/node_modules/nuxt/dist/app/components/client-only\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createElementVNode as _createElementVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { computed, inject } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Network\",\n  setup(__props) {\n    const network = inject(\"network\");\n    const toggleNetwork = inject(\"toggleNetwork\");\n    const isMainnet = computed(() => network.value === \"MAINNET\");\n    const onClickNetwork = () => {\n      alert(`Switching to ${isMainnet.value ? \"Testnet\" : \"Mainnet\"}`);\n      toggleNetwork();\n      console.log(\"Network is now\", network.value);\n    };\n    return (_ctx, _cache) => {\n      const _component_UButton = __nuxt_component_0;\n      const _component_UTooltip = __nuxt_component_1;\n      const _component_ClientOnly = __nuxt_component_2;\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Network settings\" }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UButton, {\n                icon: isMainnet.value ? \"i-heroicons-lock-closed-20-solid\" : \"i-heroicons-lock-open-20-solid\",\n                color: \"gray\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: onClickNetwork,\n                class: \"rounded-full\"\n              }, null, 8, [\"icon\"])\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726668,
+      "end": 1720085726669,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726669,
+      "end": 1720085726670,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726671,
+      "end": 1720085726671,
+      "order": "normal"
+    }
+  ]
+}

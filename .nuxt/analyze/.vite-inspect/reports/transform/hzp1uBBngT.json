@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/ShareOnX.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <UButton @click=\"shareOnX\" color=\"blue\" class=\"mb-2\">Share on X</UButton>\n</template>\n<script lang=\"ts\" setup>\nfunction shareOnX() {\n  const breaks = \"%0A\";\n  const text1 = encodeURIComponent(\"I cracked the code in the latest XRPL Community Mag and won an Albers inspired generative art NFT!\");\n  const text2 = encodeURIComponent(\"Check it out at: https://mag.xrpl.quest\");\n  const text3 = encodeURIComponent(\"Claim your own: https://xrpl.at/commons-mag-02\");\n\n  const hashtags = \"NFT,XRPL\";\n  const via = \"xrpl_commons\";\n  const twitterUrl = `https://twitter.com/intent/tweet?text=${text1}${breaks}${text2}${breaks}${breaks}${text3}${breaks}${breaks}&hashtags=${hashtags}&via=${via}`;\n  window.open(twitterUrl, '_blank');\n}\n</script>",
+      "start": 1720085726363,
+      "end": 1720085726491,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726491,
+      "end": 1720085726491,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/a/serious_game/albers/components/ShareOnX.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/a/serious_game/albers/components/ShareOnX.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
+      "start": 1720085726491,
+      "end": 1720085726526,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726527,
+      "end": 1720085726527,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726527,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/assets/fonts/clash-display.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/**\n * @license\n *\n * Font Family: Clash Display\n * Designed by: Indian Type Foundry\n * URL: https://www.fontshare.com/fonts/clash-display\n * © 2023 Indian Type Foundry\n *\n * Font Styles:\n * Clash Display Variable(Variable font)\n * Clash Display Extralight\n * Clash Display Light\n * Clash Display Regular\n * Clash Display Medium\n * Clash Display Semibold\n * Clash Display Bold\n *\n*/\n\n\n/**\n* This is a variable font\n* You can controll variable axes as shown below:\n* font-variation-settings: 'wght' 700.0;\n*\n* available axes:\n\n* 'wght' (range from 200.0 to 700.0)\n\n*/\n\n@font-face {\n  font-family: 'ClashDisplay-Variable';\n  src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Variable.woff') format('woff'),\n       url('../fonts/ClashDisplay-Variable.ttf') format('truetype');\n       font-weight: 200 700;\n       font-display: swap;\n       font-style: normal;\n}\n\n\n@font-face {\n  font-family: 'ClashDisplay-Extralight';\n  src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Extralight.woff') format('woff'),\n       url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');\n       font-weight: 200;\n       font-display: swap;\n       font-style: normal;\n}\n\n\n@font-face {\n  font-family: 'ClashDisplay-Light';\n  src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Light.woff') format('woff'),\n       url('../fonts/ClashDisplay-Light.ttf') format('truetype');\n       font-weight: 300;\n       font-display: swap;\n       font-style: normal;\n}\n\n\n@font-face {\n  font-family: 'ClashDisplay-Regular';\n  src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Regular.woff') format('woff'),\n       url('../fonts/ClashDisplay-Regular.ttf') format('truetype');\n       font-weight: 400;\n       font-display: swap;\n       font-style: normal;\n}\n\n\n@font-face {\n  font-family: 'ClashDisplay-Medium';\n  src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Medium.woff') format('woff'),\n       url('../fonts/ClashDisplay-Medium.ttf') format('truetype');\n       font-weight: 500;\n       font-display: swap;\n       font-style: normal;\n}\n\n\n@font-face {\n  font-family: 'ClashDisplay-Semibold';\n  src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Semibold.woff') format('woff'),\n       url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');\n       font-weight: 600;\n       font-display: swap;\n       font-style: normal;\n}\n\n\n@font-face {\n  font-family: 'ClashDisplay-Bold';\n  src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),\n       url('../fonts/ClashDisplay-Bold.woff') format('woff'),\n       url('../fonts/ClashDisplay-Bold.ttf') format('truetype');\n       font-weight: 700;\n       font-display: swap;\n       font-style: normal;\n}\n\n",
+      "start": 1720085715670,
+      "end": 1720085715709,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085715709,
+      "end": 1720085715709,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085715709,
+      "end": 1720085715709,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085715709,
+      "end": 1720085715709,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "@font-face{font-display:swap;font-family:ClashDisplay-Variable;font-style:normal;font-weight:200 700;src:url(__VITE_ASSET__BL$22HpG__) format(\"woff2\"),url(__VITE_ASSET__ChF$A_bB__) format(\"woff\"),url(__VITE_ASSET__DFDzU0ZF__) format(\"truetype\")}@font-face{font-display:swap;font-family:ClashDisplay-Extralight;font-style:normal;font-weight:200;src:url(__VITE_ASSET__wylgtS27__) format(\"woff2\"),url(__VITE_ASSET__BjsEX$dQ__) format(\"woff\"),url(__VITE_ASSET__DXs4Wb8r__) format(\"truetype\")}@font-face{font-display:swap;font-family:ClashDisplay-Light;font-style:normal;font-weight:300;src:url(__VITE_ASSET___un7gM6J__) format(\"woff2\"),url(__VITE_ASSET__B1sXtcuM__) format(\"woff\"),url(__VITE_ASSET__CkuSK_re__) format(\"truetype\")}@font-face{font-display:swap;font-family:ClashDisplay-Regular;font-style:normal;font-weight:400;src:url(__VITE_ASSET__BD160aeV__) format(\"woff2\"),url(__VITE_ASSET__kBsA1EpO__) format(\"woff\"),url(__VITE_ASSET__Blnk45Ph__) format(\"truetype\")}@font-face{font-display:swap;font-family:ClashDisplay-Medium;font-style:normal;font-weight:500;src:url(__VITE_ASSET___oAVsri7__) format(\"woff2\"),url(__VITE_ASSET__14XWUZ4o__) format(\"woff\"),url(__VITE_ASSET__CIRyon$Y__) format(\"truetype\")}@font-face{font-display:swap;font-family:ClashDisplay-Semibold;font-style:normal;font-weight:600;src:url(__VITE_ASSET__CNNUPWdY__) format(\"woff2\"),url(__VITE_ASSET__DqIbHSR7__) format(\"woff\"),url(__VITE_ASSET__FfmYpYqA__) format(\"truetype\")}@font-face{font-display:swap;font-family:ClashDisplay-Bold;font-style:normal;font-weight:700;src:url(__VITE_ASSET__DI7Y2AyI__) format(\"woff2\"),url(__VITE_ASSET__BmZ1SRXj__) format(\"woff\"),url(__VITE_ASSET__CiFGEkiU__) format(\"truetype\")}",
+      "start": 1720085715709,
+      "end": 1720085725147,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085725147,
+      "end": 1720085725147,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085725147,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085725148,
+      "end": 1720085725148,
+      "order": "normal"
+    }
+  ]
+}

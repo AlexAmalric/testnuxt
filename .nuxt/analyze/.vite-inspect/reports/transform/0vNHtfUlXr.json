@@ -1,0 +1,231 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/layouts/default.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, renderSlot as _renderSlot, Fragment as _Fragment } from \"vue\"\nimport _imports_0 from '/xrpl.png'\nimport _imports_1 from '/xrplb.png'\n\n\nconst _hoisted_1 = { class: \"text-xl px-2 lg:px-4 py-1 w-full fixed top-0 left-0 z-20 border-transparent lg:block backdrop-blur-md bg-transparent dark:bg-transparent text-gray-900 m-0 block\" }\nconst _hoisted_2 = { class: \"flex justify-between items-center content-center\" }\nconst _hoisted_3 = { class: \"flex justify-start items-center\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"hover:scale-110 p-2 transition-all cursor-pointer flex justify-start items-center flex-auto\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_0,\n    class: \"h-8 opacity-80 hidden dark:block\"\n  }),\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_1,\n    class: \"h-8 opacity-80 dark:invisible dark:hidden\"\n  })\n], -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"ml-2 md:text-4xl text-lg font-title text-black dark:text-white\" }, \"Community Quest\", -1)\nconst _hoisted_6 = { class: \"pl-1 flex\" }\nconst _hoisted_7 = { class: \"pt-20 pr-4 pl-4 sm:pr-4 sm:pl-4 relative overflow-auto\" }\nconst _hoisted_8 = { key: 0 }\n\nimport { inject } from 'vue'\nimport { useRouter } from 'vue-router'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'default',\n  setup(__props) {\n\nconst router = useRouter()\n\n// authentication\nconst magSecret = inject('magSecret')\n//ref<string | null>(null)\n//magSecret.value = localStorage.getItem('mag_secret')\n\nonMounted(() => {\n  if (!magSecret.value) {\n    router.push('/')\n  }\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_ColorMode = _resolveComponent(\"ColorMode\")!\n  const _component_Network = _resolveComponent(\"Network\")!\n  const _component_Secret = _resolveComponent(\"Secret\")!\n  const _component_ShapesBackground = _resolveComponent(\"ShapesBackground\")!\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            class: \"text-stratos-950 text-xl sm:text-3xl rounded-full px-0 py-1 font-title inline-flex items-center\"\n          }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UTooltip, { text: \"Home\" }, {\n                default: _withCtx(() => [\n                  _hoisted_4\n                ]),\n                _: 1\n              }),\n              _hoisted_5\n            ]),\n            _: 1\n          })\n        ]),\n        _createElementVNode(\"div\", _hoisted_6, [\n          _createVNode(_component_ColorMode),\n          _createVNode(_component_Network),\n          _createVNode(_component_Secret)\n        ])\n      ])\n    ]),\n    _createVNode(_component_ShapesBackground),\n    _createElementVNode(\"div\", _hoisted_7, [\n      (!_unref(magSecret))\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_8, \"This page requires the mag secret.\"))\n        : _renderSlot(_ctx.$slots, \"default\", { key: 1 })\n    ])\n  ], 64))\n}\n}\n\n})",
+      "start": 1720085725775,
+      "end": 1720085725775
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085725775,
+      "end": 1720085725775,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085725775,
+      "end": 1720085725775,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085725775,
+      "end": 1720085725775,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085725775,
+      "end": 1720085725775,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, renderSlot as _renderSlot, Fragment as _Fragment } from \"vue\";\nimport _imports_0 from \"/xrpl.png\";\nimport _imports_1 from \"/xrplb.png\";\nconst _hoisted_1 = { class: \"text-xl px-2 lg:px-4 py-1 w-full fixed top-0 left-0 z-20 border-transparent lg:block backdrop-blur-md bg-transparent dark:bg-transparent text-gray-900 m-0 block\" };\nconst _hoisted_2 = { class: \"flex justify-between items-center content-center\" };\nconst _hoisted_3 = { class: \"flex justify-start items-center\" };\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"hover:scale-110 p-2 transition-all cursor-pointer flex justify-start items-center flex-auto\" }, [\n  /* @__PURE__ */ _createElementVNode(\"img\", {\n    src: _imports_0,\n    class: \"h-8 opacity-80 hidden dark:block\"\n  }),\n  /* @__PURE__ */ _createElementVNode(\"img\", {\n    src: _imports_1,\n    class: \"h-8 opacity-80 dark:invisible dark:hidden\"\n  })\n], -1);\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"ml-2 md:text-4xl text-lg font-title text-black dark:text-white\" }, \"Community Quest\", -1);\nconst _hoisted_6 = { class: \"pl-1 flex\" };\nconst _hoisted_7 = { class: \"pt-20 pr-4 pl-4 sm:pr-4 sm:pl-4 relative overflow-auto\" };\nconst _hoisted_8 = { key: 0 };\nimport { inject } from \"vue\";\nimport { useRouter } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    const router = useRouter();\n    const magSecret = inject(\"magSecret\");\n    onMounted(() => {\n      if (!magSecret.value) {\n        router.push(\"/\");\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_ColorMode = _resolveComponent(\"ColorMode\");\n      const _component_Network = _resolveComponent(\"Network\");\n      const _component_Secret = _resolveComponent(\"Secret\");\n      const _component_ShapesBackground = _resolveComponent(\"ShapesBackground\");\n      return _openBlock(), _createElementBlock(_Fragment, null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createVNode(_component_NuxtLink, {\n                to: \"/\",\n                class: \"text-stratos-950 text-xl sm:text-3xl rounded-full px-0 py-1 font-title inline-flex items-center\"\n              }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_UTooltip, { text: \"Home\" }, {\n                    default: _withCtx(() => [\n                      _hoisted_4\n                    ]),\n                    _: 1\n                  }),\n                  _hoisted_5\n                ]),\n                _: 1\n              })\n            ]),\n            _createElementVNode(\"div\", _hoisted_6, [\n              _createVNode(_component_ColorMode),\n              _createVNode(_component_Network),\n              _createVNode(_component_Secret)\n            ])\n          ])\n        ]),\n        _createVNode(_component_ShapesBackground),\n        _createElementVNode(\"div\", _hoisted_7, [\n          !_unref(magSecret) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_8, \"This page requires the mag secret.\")) : _renderSlot(_ctx.$slots, \"default\", { key: 1 })\n        ])\n      ], 64);\n    };\n  }\n});\n",
+      "start": 1720085725775,
+      "end": 1720085726127,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/layouts/default.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, renderSlot as _renderSlot, Fragment as _Fragment } from \"vue\"\nimport _imports_0 from '/xrpl.png'\nimport _imports_1 from '/xrplb.png'\n\n\nconst _hoisted_1 = { class: \"text-xl px-2 lg:px-4 py-1 w-full fixed top-0 left-0 z-20 border-transparent lg:block backdrop-blur-md bg-transparent dark:bg-transparent text-gray-900 m-0 block\" }\nconst _hoisted_2 = { class: \"flex justify-between items-center content-center\" }\nconst _hoisted_3 = { class: \"flex justify-start items-center\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"hover:scale-110 p-2 transition-all cursor-pointer flex justify-start items-center flex-auto\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_0,\n    class: \"h-8 opacity-80 hidden dark:block\"\n  }),\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_1,\n    class: \"h-8 opacity-80 dark:invisible dark:hidden\"\n  })\n], -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"ml-2 md:text-4xl text-lg font-title text-black dark:text-white\" }, \"Community Quest\", -1)\nconst _hoisted_6 = { class: \"pl-1 flex\" }\nconst _hoisted_7 = { class: \"pt-20 pr-4 pl-4 sm:pr-4 sm:pl-4 relative overflow-auto\" }\nconst _hoisted_8 = { key: 0 }\n\nimport { inject } from 'vue'\nimport { useRouter } from 'vue-router'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'default',\n  setup(__props) {\n\nconst router = useRouter()\n\n// authentication\nconst magSecret = inject('magSecret')\n//ref<string | null>(null)\n//magSecret.value = localStorage.getItem('mag_secret')\n\nonMounted(() => {\n  if (!magSecret.value) {\n    router.push('/')\n  }\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n  const _component_ColorMode = _resolveComponent(\"ColorMode\")!\n  const _component_Network = _resolveComponent(\"Network\")!\n  const _component_Secret = _resolveComponent(\"Secret\")!\n  const _component_ShapesBackground = _resolveComponent(\"ShapesBackground\")!\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            class: \"text-stratos-950 text-xl sm:text-3xl rounded-full px-0 py-1 font-title inline-flex items-center\"\n          }, {\n            default: _withCtx(() => [\n              _createVNode(_component_UTooltip, { text: \"Home\" }, {\n                default: _withCtx(() => [\n                  _hoisted_4\n                ]),\n                _: 1\n              }),\n              _hoisted_5\n            ]),\n            _: 1\n          })\n        ]),\n        _createElementVNode(\"div\", _hoisted_6, [\n          _createVNode(_component_ColorMode),\n          _createVNode(_component_Network),\n          _createVNode(_component_Secret)\n        ])\n      ])\n    ]),\n    _createVNode(_component_ShapesBackground),\n    _createElementVNode(\"div\", _hoisted_7, [\n      (!_unref(magSecret))\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_8, \"This page requires the mag secret.\"))\n        : _renderSlot(_ctx.$slots, \"default\", { key: 1 })\n    ])\n  ], 64))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,sBAAsB,qBAAqB,oBAAoB,mBAAmB,WAAW,UAAU,eAAe,cAAc,SAAS,QAAQ,aAAa,YAAY,sBAAsB,qBAAgE,cAAc,aAAa,YAAY,iBAAiB;AACrU,OAAO,gBAAgB;AACvB,OAAO,gBAAgB;AAGvB,MAAM,aAAa,EAAE,OAAO,mKAAmK;AAC/L,MAAM,aAAa,EAAE,OAAO,mDAAmD;AAC/E,MAAM,aAAa,EAAE,OAAO,kCAAkC;AAC9D,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,8FAA8F,GAAG;AAAA,EACtJ,oCAAoB,OAAO;AAAA,IACtC,KAAK;AAAA,IACL,OAAO;AAAA,EACT,CAAC;AAAA,EACY,oCAAoB,OAAO;AAAA,IACtC,KAAK;AAAA,IACL,OAAO;AAAA,EACT,CAAC;AACH,GAAG,EAAE;AACL,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,iEAAiE,GAAG,mBAAmB,EAAE;AAC7J,MAAM,aAAa,EAAE,OAAO,YAAY;AACxC,MAAM,aAAa,EAAE,OAAO,yDAAyD;AACrF,MAAM,aAAa,EAAE,KAAK,EAAE;AAE5B,SAAS,cAAc;AACvB,SAAS,iBAAiB;AAG1B,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,UAAM,SAAS,UAAU;AAGzB,UAAM,YAAY,OAAO,WAAW;AAIpC,cAAU,MAAM;AACd,UAAI,CAAC,UAAU,OAAO;AACpB,eAAO,KAAK,GAAG;AAAA,MACjB;AAAA,IACF,CAAC;AAED,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,sBAAsB,kBAAkB,UAAU;AACxD,YAAM,sBAAsB,kBAAkB,UAAU;AACxD,YAAM,uBAAuB,kBAAkB,WAAW;AAC1D,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,oBAAoB,kBAAkB,QAAQ;AACpD,YAAM,8BAA8B,kBAAkB,kBAAkB;AAExE,aAAQ,WAAW,GAAG,oBAAoB,WAAW,MAAM;AAAA,QACzD,oBAAoB,OAAO,YAAY;AAAA,UACrC,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,OAAO,YAAY;AAAA,cACrC,aAAa,qBAAqB;AAAA,gBAChC,IAAI;AAAA,gBACJ,OAAO;AAAA,cACT,GAAG;AAAA,gBACD,SAAS,SAAS,MAAM;AAAA,kBACtB,aAAa,qBAAqB,EAAE,MAAM,OAAO,GAAG;AAAA,oBAClD,SAAS,SAAS,MAAM;AAAA,sBACtB;AAAA,oBACF,CAAC;AAAA,oBACD,GAAG;AAAA,kBACL,CAAC;AAAA,kBACD;AAAA,gBACF,CAAC;AAAA,gBACD,GAAG;AAAA,cACL,CAAC;AAAA,YACH,CAAC;AAAA,YACD,oBAAoB,OAAO,YAAY;AAAA,cACrC,aAAa,oBAAoB;AAAA,cACjC,aAAa,kBAAkB;AAAA,cAC/B,aAAa,iBAAiB;AAAA,YAChC,CAAC;AAAA,UACH,CAAC;AAAA,QACH,CAAC;AAAA,QACD,aAAa,2BAA2B;AAAA,QACxC,oBAAoB,OAAO,YAAY;AAAA,UACpC,CAAC,OAAO,SAAS,KACb,WAAW,GAAG,oBAAoB,OAAO,YAAY,oCAAoC,KAC1F,YAAY,KAAK,QAAQ,WAAW,EAAE,KAAK,EAAE,CAAC;AAAA,QACpD,CAAC;AAAA,MACH,GAAG,EAAE;AAAA,IACP;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726127,
+      "end": 1720085726127,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726127,
+      "end": 1720085726127,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726128,
+      "end": 1720085726128,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726128,
+      "end": 1720085726128,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726128,
+      "end": 1720085726128,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726128,
+      "end": 1720085726128,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726128,
+      "end": 1720085726128,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726130,
+      "end": 1720085726131,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726132,
+      "end": 1720085726133,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726134,
+      "end": 1720085726134,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726135,
+      "end": 1720085726135,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { onMounted } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, renderSlot as _renderSlot, Fragment as _Fragment } from \"vue\";\nimport _imports_0 from \"/xrpl.png\";\nimport _imports_1 from \"/xrplb.png\";\nconst _hoisted_1 = { class: \"text-xl px-2 lg:px-4 py-1 w-full fixed top-0 left-0 z-20 border-transparent lg:block backdrop-blur-md bg-transparent dark:bg-transparent text-gray-900 m-0 block\" };\nconst _hoisted_2 = { class: \"flex justify-between items-center content-center\" };\nconst _hoisted_3 = { class: \"flex justify-start items-center\" };\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"hover:scale-110 p-2 transition-all cursor-pointer flex justify-start items-center flex-auto\" }, [\n  /* @__PURE__ */ _createElementVNode(\"img\", {\n    src: _imports_0,\n    class: \"h-8 opacity-80 hidden dark:block\"\n  }),\n  /* @__PURE__ */ _createElementVNode(\"img\", {\n    src: _imports_1,\n    class: \"h-8 opacity-80 dark:invisible dark:hidden\"\n  })\n], -1);\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"ml-2 md:text-4xl text-lg font-title text-black dark:text-white\" }, \"Community Quest\", -1);\nconst _hoisted_6 = { class: \"pl-1 flex\" };\nconst _hoisted_7 = { class: \"pt-20 pr-4 pl-4 sm:pr-4 sm:pl-4 relative overflow-auto\" };\nconst _hoisted_8 = { key: 0 };\nimport { inject } from \"vue\";\nimport { useRouter } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    const router = useRouter();\n    const magSecret = inject(\"magSecret\");\n    onMounted(() => {\n      if (!magSecret.value) {\n        router.push(\"/\");\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      const _component_ColorMode = _resolveComponent(\"ColorMode\");\n      const _component_Network = _resolveComponent(\"Network\");\n      const _component_Secret = _resolveComponent(\"Secret\");\n      const _component_ShapesBackground = _resolveComponent(\"ShapesBackground\");\n      return _openBlock(), _createElementBlock(_Fragment, null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createVNode(_component_NuxtLink, {\n                to: \"/\",\n                class: \"text-stratos-950 text-xl sm:text-3xl rounded-full px-0 py-1 font-title inline-flex items-center\"\n              }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_UTooltip, { text: \"Home\" }, {\n                    default: _withCtx(() => [\n                      _hoisted_4\n                    ]),\n                    _: 1\n                  }),\n                  _hoisted_5\n                ]),\n                _: 1\n              })\n            ]),\n            _createElementVNode(\"div\", _hoisted_6, [\n              _createVNode(_component_ColorMode),\n              _createVNode(_component_Network),\n              _createVNode(_component_Secret)\n            ])\n          ])\n        ]),\n        _createVNode(_component_ShapesBackground),\n        _createElementVNode(\"div\", _hoisted_7, [\n          !_unref(magSecret) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_8, \"This page requires the mag secret.\")) : _renderSlot(_ctx.$slots, \"default\", { key: 1 })\n        ])\n      ], 64);\n    };\n  }\n});\n",
+      "start": 1720085726135,
+      "end": 1720085726145,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChS,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjM,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7K,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726148,
+      "end": 1720085726149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726149,
+      "end": 1720085726149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726149,
+      "end": 1720085726149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726149,
+      "end": 1720085726149,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Tooltip.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { default as __nuxt_component_2 } from \"/home/a/serious_game/albers/components/ColorMode.vue\";\nimport { default as __nuxt_component_3 } from \"/home/a/serious_game/albers/components/Network.vue\";\nimport { default as __nuxt_component_4 } from \"/home/a/serious_game/albers/components/Secret.vue\";\nimport { default as __nuxt_component_5 } from \"/home/a/serious_game/albers/components/Shapes/ShapesBackground.vue\";\nimport { onMounted } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, renderSlot as _renderSlot, Fragment as _Fragment } from \"vue\";\nimport _imports_0 from \"/xrpl.png\";\nimport _imports_1 from \"/xrplb.png\";\nconst _hoisted_1 = { class: \"text-xl px-2 lg:px-4 py-1 w-full fixed top-0 left-0 z-20 border-transparent lg:block backdrop-blur-md bg-transparent dark:bg-transparent text-gray-900 m-0 block\" };\nconst _hoisted_2 = { class: \"flex justify-between items-center content-center\" };\nconst _hoisted_3 = { class: \"flex justify-start items-center\" };\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"hover:scale-110 p-2 transition-all cursor-pointer flex justify-start items-center flex-auto\" }, [\n  /* @__PURE__ */ _createElementVNode(\"img\", {\n    src: _imports_0,\n    class: \"h-8 opacity-80 hidden dark:block\"\n  }),\n  /* @__PURE__ */ _createElementVNode(\"img\", {\n    src: _imports_1,\n    class: \"h-8 opacity-80 dark:invisible dark:hidden\"\n  })\n], -1);\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"ml-2 md:text-4xl text-lg font-title text-black dark:text-white\" }, \"Community Quest\", -1);\nconst _hoisted_6 = { class: \"pl-1 flex\" };\nconst _hoisted_7 = { class: \"pt-20 pr-4 pl-4 sm:pr-4 sm:pl-4 relative overflow-auto\" };\nconst _hoisted_8 = { key: 0 };\nimport { inject } from \"vue\";\nimport { useRouter } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    const router = useRouter();\n    const magSecret = inject(\"magSecret\");\n    onMounted(() => {\n      if (!magSecret.value) {\n        router.push(\"/\");\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UTooltip = __nuxt_component_0;\n      const _component_NuxtLink = __nuxt_component_1;\n      const _component_ColorMode = __nuxt_component_2;\n      const _component_Network = __nuxt_component_3;\n      const _component_Secret = __nuxt_component_4;\n      const _component_ShapesBackground = __nuxt_component_5;\n      return _openBlock(), _createElementBlock(_Fragment, null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createVNode(_component_NuxtLink, {\n                to: \"/\",\n                class: \"text-stratos-950 text-xl sm:text-3xl rounded-full px-0 py-1 font-title inline-flex items-center\"\n              }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_UTooltip, { text: \"Home\" }, {\n                    default: _withCtx(() => [\n                      _hoisted_4\n                    ]),\n                    _: 1\n                  }),\n                  _hoisted_5\n                ]),\n                _: 1\n              })\n            ]),\n            _createElementVNode(\"div\", _hoisted_6, [\n              _createVNode(_component_ColorMode),\n              _createVNode(_component_Network),\n              _createVNode(_component_Secret)\n            ])\n          ])\n        ]),\n        _createVNode(_component_ShapesBackground),\n        _createElementVNode(\"div\", _hoisted_7, [\n          !_unref(magSecret) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_8, \"This page requires the mag secret.\")) : _renderSlot(_ctx.$slots, \"default\", { key: 1 })\n        ])\n      ], 64);\n    };\n  }\n});\n",
+      "start": 1720085726150,
+      "end": 1720085726150,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726151,
+      "end": 1720085726152,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726152,
+      "end": 1720085726152,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726153,
+      "end": 1720085726153,
+      "order": "normal"
+    }
+  ]
+}

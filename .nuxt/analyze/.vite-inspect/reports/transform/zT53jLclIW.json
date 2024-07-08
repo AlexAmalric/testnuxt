@@ -1,0 +1,222 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/server/client.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "// this is meant to be imported on the client to interact with the server api\n// all client side functions will be defined here\n\nconst actions = [\n  {\n    name: 'checkSecret',\n    path: '/api/secret',\n    method: 'POST'\n  },\n  {\n    name: 'createNFT',\n    path: '/api/art/create',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'getNFTs',\n    path: '/api/art',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'createOffer',\n    path: '/api/art/createOffer',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'claimNFT',\n    path: '/api/art/claim',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'redeemNFT',\n    path: '/api/art/redeem',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'listCollection',\n    path: '/api/art',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'XamanSignIn',\n    path: '/api/xaman/sign-in',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'XamanGetPayload',\n    path: '/api/xaman/payload',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'XamanGetAcceptNFTOffer',\n    path: '/api/xaman/acceptNFTOffer',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'createAlbersURL',\n    path: '/api/art/image/create',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'albersURLExists',\n    path: '/api/art/image',\n    method: 'GET',\n    secretRequired: true\n  }\n\n]\n\ntype Headers = {\n  [key: string]: string;\n}\n\n/* @ts-ignore */\nconst getCookies = () => decodeURIComponent(document.cookie)\n  .split(';').reduce((cookies: any, cookie: any) => {\n    const [name, value] = cookie.split('=').map(c => c.trim());\n    cookies[name] = decodeURIComponent(value);\n    return cookies;\n  }, {})\n\n\n\nconst api: { [key: string]: any } = {}\nactions.forEach(action => {\n  api[action.name] = async (props: any) => {\n    const headers: Headers = {\n      'content-type': 'application/json'\n    }\n    const cookies = getCookies()\n    const secret = cookies['secret']\n    console.log('cookie', document.cookie, cookies, secret)\n\n    if (action.secretRequired) {\n      if (!secret) {\n        throw new Error('secret is required')\n      }\n      headers['x-secret'] = secret\n    }\n\n    let url = action.path;\n    let body = undefined;\n    let queryString = '';\n    if (action.method === 'GET' && props && Object.keys(props).length) {\n      // Ensure values are converted to strings to satisfy encodeURIComponent's expected parameter types\n      queryString = Object.entries(props).map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(`${value}`)}`).join('&');\n      url = `${url}?${queryString}`;\n    } else if (action.method !== 'GET') {\n      body = JSON.stringify(props);\n    }\n\n    try {\n      const response = await fetch(url, {\n        method: action.method,\n        headers,\n        ...(body ? { body } : {})\n      });\n\n      if (!response.ok) {\n        const errorBody = await response.json();\n        throw new Error(errorBody.message || 'An error occurred with the request.');\n      }\n\n      return response.json();\n    } catch (error: any) {\n      // This catch block will handle fetch errors as well as errors thrown from non-ok responses\n      console.error(`Error with the ${action.name} action:`, error.message);\n      throw error; // Rethrow the error so that the calling code can handle it\n    }\n  }\n})\nexport default api",
+      "start": 1720085726295,
+      "end": 1720085726394,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726394,
+      "end": 1720085726394,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "const actions = [\n  {\n    name: \"checkSecret\",\n    path: \"/api/secret\",\n    method: \"POST\"\n  },\n  {\n    name: \"createNFT\",\n    path: \"/api/art/create\",\n    method: \"POST\",\n    secretRequired: true\n  },\n  {\n    name: \"getNFTs\",\n    path: \"/api/art\",\n    method: \"GET\",\n    secretRequired: true\n  },\n  {\n    name: \"createOffer\",\n    path: \"/api/art/createOffer\",\n    method: \"POST\",\n    secretRequired: true\n  },\n  {\n    name: \"claimNFT\",\n    path: \"/api/art/claim\",\n    method: \"POST\",\n    secretRequired: true\n  },\n  {\n    name: \"redeemNFT\",\n    path: \"/api/art/redeem\",\n    method: \"POST\",\n    secretRequired: true\n  },\n  {\n    name: \"listCollection\",\n    path: \"/api/art\",\n    method: \"GET\",\n    secretRequired: true\n  },\n  {\n    name: \"XamanSignIn\",\n    path: \"/api/xaman/sign-in\",\n    method: \"GET\",\n    secretRequired: true\n  },\n  {\n    name: \"XamanGetPayload\",\n    path: \"/api/xaman/payload\",\n    method: \"GET\",\n    secretRequired: true\n  },\n  {\n    name: \"XamanGetAcceptNFTOffer\",\n    path: \"/api/xaman/acceptNFTOffer\",\n    method: \"GET\",\n    secretRequired: true\n  },\n  {\n    name: \"createAlbersURL\",\n    path: \"/api/art/image/create\",\n    method: \"POST\",\n    secretRequired: true\n  },\n  {\n    name: \"albersURLExists\",\n    path: \"/api/art/image\",\n    method: \"GET\",\n    secretRequired: true\n  }\n];\nconst getCookies = () => decodeURIComponent(document.cookie).split(\";\").reduce((cookies, cookie) => {\n  const [name, value] = cookie.split(\"=\").map((c) => c.trim());\n  cookies[name] = decodeURIComponent(value);\n  return cookies;\n}, {});\nconst api = {};\nactions.forEach((action) => {\n  api[action.name] = async (props) => {\n    const headers = {\n      \"content-type\": \"application/json\"\n    };\n    const cookies = getCookies();\n    const secret = cookies[\"secret\"];\n    console.log(\"cookie\", document.cookie, cookies, secret);\n    if (action.secretRequired) {\n      if (!secret) {\n        throw new Error(\"secret is required\");\n      }\n      headers[\"x-secret\"] = secret;\n    }\n    let url = action.path;\n    let body = void 0;\n    let queryString = \"\";\n    if (action.method === \"GET\" && props && Object.keys(props).length) {\n      queryString = Object.entries(props).map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(`${value}`)}`).join(\"&\");\n      url = `${url}?${queryString}`;\n    } else if (action.method !== \"GET\") {\n      body = JSON.stringify(props);\n    }\n    try {\n      const response = await fetch(url, {\n        method: action.method,\n        headers,\n        ...body ? { body } : {}\n      });\n      if (!response.ok) {\n        const errorBody = await response.json();\n        throw new Error(errorBody.message || \"An error occurred with the request.\");\n      }\n      return response.json();\n    } catch (error) {\n      console.error(`Error with the ${action.name} action:`, error.message);\n      throw error;\n    }\n  };\n});\nexport default api;\n",
+      "start": 1720085726394,
+      "end": 1720085726426,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/server/client.ts"
+        ],
+        "sourcesContent": [
+          "// this is meant to be imported on the client to interact with the server api\n// all client side functions will be defined here\n\nconst actions = [\n  {\n    name: 'checkSecret',\n    path: '/api/secret',\n    method: 'POST'\n  },\n  {\n    name: 'createNFT',\n    path: '/api/art/create',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'getNFTs',\n    path: '/api/art',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'createOffer',\n    path: '/api/art/createOffer',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'claimNFT',\n    path: '/api/art/claim',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'redeemNFT',\n    path: '/api/art/redeem',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'listCollection',\n    path: '/api/art',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'XamanSignIn',\n    path: '/api/xaman/sign-in',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'XamanGetPayload',\n    path: '/api/xaman/payload',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'XamanGetAcceptNFTOffer',\n    path: '/api/xaman/acceptNFTOffer',\n    method: 'GET',\n    secretRequired: true\n  },\n  {\n    name: 'createAlbersURL',\n    path: '/api/art/image/create',\n    method: 'POST',\n    secretRequired: true\n  },\n  {\n    name: 'albersURLExists',\n    path: '/api/art/image',\n    method: 'GET',\n    secretRequired: true\n  }\n\n]\n\ntype Headers = {\n  [key: string]: string;\n}\n\n/* @ts-ignore */\nconst getCookies = () => decodeURIComponent(document.cookie)\n  .split(';').reduce((cookies: any, cookie: any) => {\n    const [name, value] = cookie.split('=').map(c => c.trim());\n    cookies[name] = decodeURIComponent(value);\n    return cookies;\n  }, {})\n\n\n\nconst api: { [key: string]: any } = {}\nactions.forEach(action => {\n  api[action.name] = async (props: any) => {\n    const headers: Headers = {\n      'content-type': 'application/json'\n    }\n    const cookies = getCookies()\n    const secret = cookies['secret']\n    console.log('cookie', document.cookie, cookies, secret)\n\n    if (action.secretRequired) {\n      if (!secret) {\n        throw new Error('secret is required')\n      }\n      headers['x-secret'] = secret\n    }\n\n    let url = action.path;\n    let body = undefined;\n    let queryString = '';\n    if (action.method === 'GET' && props && Object.keys(props).length) {\n      // Ensure values are converted to strings to satisfy encodeURIComponent's expected parameter types\n      queryString = Object.entries(props).map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(`${value}`)}`).join('&');\n      url = `${url}?${queryString}`;\n    } else if (action.method !== 'GET') {\n      body = JSON.stringify(props);\n    }\n\n    try {\n      const response = await fetch(url, {\n        method: action.method,\n        headers,\n        ...(body ? { body } : {})\n      });\n\n      if (!response.ok) {\n        const errorBody = await response.json();\n        throw new Error(errorBody.message || 'An error occurred with the request.');\n      }\n\n      return response.json();\n    } catch (error: any) {\n      // This catch block will handle fetch errors as well as errors thrown from non-ok responses\n      console.error(`Error with the ${action.name} action:`, error.message);\n      throw error; // Rethrow the error so that the calling code can handle it\n    }\n  }\n})\nexport default api"
+        ],
+        "mappings": "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",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726426,
+      "end": 1720085726426,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726432,
+      "end": 1720085726432,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726432,
+      "end": 1720085726432,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726433,
+      "end": 1720085726433,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726433,
+      "end": 1720085726434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726434,
+      "end": 1720085726434,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726434,
+      "end": 1720085726434,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726434,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726436,
+      "end": 1720085726436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726437,
+      "end": 1720085726437,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726437,
+      "end": 1720085726437,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726437,
+      "end": 1720085726437,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726437,
+      "end": 1720085726437,
+      "order": "normal"
+    }
+  ]
+}

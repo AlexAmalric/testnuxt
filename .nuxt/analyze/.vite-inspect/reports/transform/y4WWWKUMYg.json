@@ -1,0 +1,230 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/pages/albers/index.vue?macro=true&vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, unref as _unref, toDisplayString as _toDisplayString, createCommentVNode as _createCommentVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"m-2\" }\nconst _hoisted_2 = { class: \"ml-2 text-md text-center font-title text-gray-600 dark:text-gray-300 mb-4\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_8 = { class: \"text-center\" }\nconst _hoisted_9 = {\n  key: 0,\n  class: \"inline-block\"\n}\nconst _hoisted_10 = [\"src\"]\nconst _hoisted_11 = { class: \"nft-info\" }\nconst _hoisted_12 = { class: \"nft-date\" }\nconst _hoisted_13 = {\n  key: 0,\n  class: \"text-center font-title text-lg\"\n}\n\nimport { formatDate } from '~/utils/dateHelper';\nimport { ref, onMounted, inject, watch } from \"vue\"\n/* @ts-ignore */\nimport API from '~/server/client'\nimport { useRouter } from 'vue-router'\n\n\ninterface NftObject {\n  nftId: string;\n  uri: string;\n  xrplAddress: string;\n  mintedAt: string;\n  rank: number;\n}\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  setup(__props) {\n\n/* @ts-ignore */\nconst router = useRouter()\nconst network: any = inject('network')\n\nconst nfts = ref<NftObject[]>([]);\n\nonMounted(async () => {\n  try {\n    const result = await API.listCollection({ network: network.value })\n    nfts.value = result\n  } catch (error) {\n    alert(\"Error getting NFT arts: \" + error);\n  }\n})\n\nwatch(network, async () => {\n  try {\n    const result = await API.listCollection({ network: network.value })\n    nfts.value = result\n  } catch (error) {\n    alert(\"Error getting NFT arts: \" + error);\n  }\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createTextVNode(\" Congratulations, you made it through! \"),\n        _hoisted_3,\n        _createTextVNode(\" If you want to get your own unique, Albers-inspired, generative art NFT, you can claim it now. \"),\n        _hoisted_4,\n        _hoisted_5,\n        _createVNode(_component_UButton, {\n          onClick: _cache[0] || (_cache[0] = ($event: any) => (_ctx.$router.push('/albers/mint'))),\n          color: \"black\",\n          size: \"xl\",\n          class: \"\"\n        }, {\n          default: _withCtx(() => [\n            _createTextVNode(\" Claim your NFT \")\n          ]),\n          _: 1\n        }),\n        _hoisted_6,\n        _hoisted_7,\n        _createTextVNode(\" Join the legends \")\n      ])\n    ]),\n    _createElementVNode(\"div\", _hoisted_8, [\n      (nfts.value && nfts.value.length > 0)\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_9, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(nfts.value, (nft) => {\n              return (_openBlock(), _createElementBlock(\"div\", {\n                key: nft.nftId,\n                class: \"inline-block m-2\"\n              }, [\n                _createVNode(_component_NuxtLink, {\n                  to: `/albers/${nft.xrplAddress}`\n                }, {\n                  default: _withCtx(() => [\n                    _createElementVNode(\"img\", {\n                      src: nft.uri,\n                      alt: \"NFT Image\",\n                      class: \"nft-image rounded-lg\"\n                    }, null, 8, _hoisted_10),\n                    _createElementVNode(\"div\", _hoisted_11, [\n                      _createElementVNode(\"p\", _hoisted_12, _toDisplayString(_unref(formatDate)(nft.mintedAt)), 1),\n                      (nft.rank)\n                        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_13, \"Rank #\" + _toDisplayString(nft.rank), 1))\n                        : _createCommentVNode(\"\", true)\n                    ])\n                  ]),\n                  _: 2\n                }, 1032, [\"to\"])\n              ]))\n            }), 128))\n          ]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1720085725774,
+      "end": 1720085725774
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085725774,
+      "end": 1720085725774,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085725774,
+      "end": 1720085725774,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085725774,
+      "end": 1720085725774,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085725774,
+      "end": 1720085725774,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, unref as _unref, toDisplayString as _toDisplayString, createCommentVNode as _createCommentVNode } from \"vue\";\nconst _hoisted_1 = { class: \"m-2\" };\nconst _hoisted_2 = { class: \"ml-2 text-md text-center font-title text-gray-600 dark:text-gray-300 mb-4\" };\nconst _hoisted_3 = /* @__PURE__ */ _createElementVNode(\"br\", null, null, -1);\nconst _hoisted_4 = /* @__PURE__ */ _createElementVNode(\"br\", null, null, -1);\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"br\", null, null, -1);\nconst _hoisted_6 = /* @__PURE__ */ _createElementVNode(\"br\", null, null, -1);\nconst _hoisted_7 = /* @__PURE__ */ _createElementVNode(\"br\", null, null, -1);\nconst _hoisted_8 = { class: \"text-center\" };\nconst _hoisted_9 = {\n  key: 0,\n  class: \"inline-block\"\n};\nconst _hoisted_10 = [\"src\"];\nconst _hoisted_11 = { class: \"nft-info\" };\nconst _hoisted_12 = { class: \"nft-date\" };\nconst _hoisted_13 = {\n  key: 0,\n  class: \"text-center font-title text-lg\"\n};\nimport { formatDate } from \"~/utils/dateHelper\";\nimport { ref, onMounted, inject, watch } from \"vue\";\nimport API from \"~/server/client\";\nimport { useRouter } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"index\",\n  setup(__props) {\n    const router = useRouter();\n    const network = inject(\"network\");\n    const nfts = ref([]);\n    onMounted(async () => {\n      try {\n        const result = await API.listCollection({ network: network.value });\n        nfts.value = result;\n      } catch (error) {\n        alert(\"Error getting NFT arts: \" + error);\n      }\n    });\n    watch(network, async () => {\n      try {\n        const result = await API.listCollection({ network: network.value });\n        nfts.value = result;\n      } catch (error) {\n        alert(\"Error getting NFT arts: \" + error);\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      const _component_NuxtLink = _resolveComponent(\"NuxtLink\");\n      return _openBlock(), _createElementBlock(\"div\", null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createTextVNode(\" Congratulations, you made it through! \"),\n            _hoisted_3,\n            _createTextVNode(\" If you want to get your own unique, Albers-inspired, generative art NFT, you can claim it now. \"),\n            _hoisted_4,\n            _hoisted_5,\n            _createVNode(_component_UButton, {\n              onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$router.push(\"/albers/mint\")),\n              color: \"black\",\n              size: \"xl\",\n              class: \"\"\n            }, {\n              default: _withCtx(() => [\n                _createTextVNode(\" Claim your NFT \")\n              ]),\n              _: 1\n            }),\n            _hoisted_6,\n            _hoisted_7,\n            _createTextVNode(\" Join the legends \")\n          ])\n        ]),\n        _createElementVNode(\"div\", _hoisted_8, [\n          nfts.value && nfts.value.length > 0 ? (_openBlock(), _createElementBlock(\"div\", _hoisted_9, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(nfts.value, (nft) => {\n              return _openBlock(), _createElementBlock(\"div\", {\n                key: nft.nftId,\n                class: \"inline-block m-2\"\n              }, [\n                _createVNode(_component_NuxtLink, {\n                  to: `/albers/${nft.xrplAddress}`\n                }, {\n                  default: _withCtx(() => [\n                    _createElementVNode(\"img\", {\n                      src: nft.uri,\n                      alt: \"NFT Image\",\n                      class: \"nft-image rounded-lg\"\n                    }, null, 8, _hoisted_10),\n                    _createElementVNode(\"div\", _hoisted_11, [\n                      _createElementVNode(\"p\", _hoisted_12, _toDisplayString(_unref(formatDate)(nft.mintedAt)), 1),\n                      nft.rank ? (_openBlock(), _createElementBlock(\"div\", _hoisted_13, \"Rank #\" + _toDisplayString(nft.rank), 1)) : _createCommentVNode(\"\", true)\n                    ])\n                  ]),\n                  _: 2\n                }, 1032, [\"to\"])\n              ]);\n            }), 128))\n          ])) : _createCommentVNode(\"\", true)\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1720085725774,
+      "end": 1720085726167,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/pages/albers/index.vue?macro=true&vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, unref as _unref, toDisplayString as _toDisplayString, createCommentVNode as _createCommentVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"m-2\" }\nconst _hoisted_2 = { class: \"ml-2 text-md text-center font-title text-gray-600 dark:text-gray-300 mb-4\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_8 = { class: \"text-center\" }\nconst _hoisted_9 = {\n  key: 0,\n  class: \"inline-block\"\n}\nconst _hoisted_10 = [\"src\"]\nconst _hoisted_11 = { class: \"nft-info\" }\nconst _hoisted_12 = { class: \"nft-date\" }\nconst _hoisted_13 = {\n  key: 0,\n  class: \"text-center font-title text-lg\"\n}\n\nimport { formatDate } from '~/utils/dateHelper';\nimport { ref, onMounted, inject, watch } from \"vue\"\n/* @ts-ignore */\nimport API from '~/server/client'\nimport { useRouter } from 'vue-router'\n\n\ninterface NftObject {\n  nftId: string;\n  uri: string;\n  xrplAddress: string;\n  mintedAt: string;\n  rank: number;\n}\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'index',\n  setup(__props) {\n\n/* @ts-ignore */\nconst router = useRouter()\nconst network: any = inject('network')\n\nconst nfts = ref<NftObject[]>([]);\n\nonMounted(async () => {\n  try {\n    const result = await API.listCollection({ network: network.value })\n    nfts.value = result\n  } catch (error) {\n    alert(\"Error getting NFT arts: \" + error);\n  }\n})\n\nwatch(network, async () => {\n  try {\n    const result = await API.listCollection({ network: network.value })\n    nfts.value = result\n  } catch (error) {\n    alert(\"Error getting NFT arts: \" + error);\n  }\n})\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createTextVNode(\" Congratulations, you made it through! \"),\n        _hoisted_3,\n        _createTextVNode(\" If you want to get your own unique, Albers-inspired, generative art NFT, you can claim it now. \"),\n        _hoisted_4,\n        _hoisted_5,\n        _createVNode(_component_UButton, {\n          onClick: _cache[0] || (_cache[0] = ($event: any) => (_ctx.$router.push('/albers/mint'))),\n          color: \"black\",\n          size: \"xl\",\n          class: \"\"\n        }, {\n          default: _withCtx(() => [\n            _createTextVNode(\" Claim your NFT \")\n          ]),\n          _: 1\n        }),\n        _hoisted_6,\n        _hoisted_7,\n        _createTextVNode(\" Join the legends \")\n      ])\n    ]),\n    _createElementVNode(\"div\", _hoisted_8, [\n      (nfts.value && nfts.value.length > 0)\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_9, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(nfts.value, (nft) => {\n              return (_openBlock(), _createElementBlock(\"div\", {\n                key: nft.nftId,\n                class: \"inline-block m-2\"\n              }, [\n                _createVNode(_component_NuxtLink, {\n                  to: `/albers/${nft.xrplAddress}`\n                }, {\n                  default: _withCtx(() => [\n                    _createElementVNode(\"img\", {\n                      src: nft.uri,\n                      alt: \"NFT Image\",\n                      class: \"nft-image rounded-lg\"\n                    }, null, 8, _hoisted_10),\n                    _createElementVNode(\"div\", _hoisted_11, [\n                      _createElementVNode(\"p\", _hoisted_12, _toDisplayString(_unref(formatDate)(nft.mintedAt)), 1),\n                      (nft.rank)\n                        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_13, \"Rank #\" + _toDisplayString(nft.rank), 1))\n                        : _createCommentVNode(\"\", true)\n                    ])\n                  ]),\n                  _: 2\n                }, 1032, [\"to\"])\n              ]))\n            }), 128))\n          ]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "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",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726167,
+      "end": 1720085726167,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726167,
+      "end": 1720085726169,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726170,
+      "end": 1720085726170,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726171,
+      "end": 1720085726171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726171,
+      "end": 1720085726171,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726171,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726172,
+      "end": 1720085726172,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726172,
+      "end": 1720085726185,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726186,
+      "end": 1720085726186,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1720085726187,
+      "end": 1720085726188,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726188,
+      "end": 1720085726188,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726188,
+      "end": 1720085726188,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726189,
+      "end": 1720085726189,
+      "order": "normal"
+    }
+  ]
+}

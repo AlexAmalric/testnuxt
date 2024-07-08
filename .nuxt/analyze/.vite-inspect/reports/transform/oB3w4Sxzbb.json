@@ -1,0 +1,230 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Shapes/line.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  width: \"228px\",\n  height: \"219px\"\n}\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'line',\n  props: ['fillColor'],\n  setup(__props) {\n\nconst props = __props\nconst fillColor = computed(() => props.fillColor)\n\nconst fill = ref(fillColor || \"rgb(25, 255, 131)\")\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"svg\", _hoisted_1, [\n    _createElementVNode(\"path\", {\n      \"fill-rule\": \"evenodd\",\n      style: _normalizeStyle({ fill: _unref(fill) }),\n      class: \"transition-[fill] duration-1000\",\n      d: \"M194.0,0.0 C205.332,11.332 216.667,22.667 228.0,33.999 C227.666,34.666 227.333,35.333 227.0,36.0 C162.339,96.993 97.660,158.6 32.999,218.999 C32.0,218.666 30.999,218.333 29.999,217.999 C20.0,206.334 9.998,194.665 0.0,182.999 C64.660,122.6 129.339,60.993 194.0,0.0 Z\"\n    }, null, 4)\n  ]))\n}\n}\n\n})",
+      "start": 1720085726643,
+      "end": 1720085726643
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726643,
+      "end": 1720085726643,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726643,
+      "end": 1720085726643,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726643,
+      "end": 1720085726643,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726643,
+      "end": 1720085726643,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = {\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  width: \"228px\",\n  height: \"219px\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"line\",\n  props: [\"fillColor\"],\n  setup(__props) {\n    const props = __props;\n    const fillColor = computed(() => props.fillColor);\n    const fill = ref(fillColor || \"rgb(25, 255, 131)\");\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"svg\", _hoisted_1, [\n        _createElementVNode(\"path\", {\n          \"fill-rule\": \"evenodd\",\n          style: _normalizeStyle({ fill: _unref(fill) }),\n          class: \"transition-[fill] duration-1000\",\n          d: \"M194.0,0.0 C205.332,11.332 216.667,22.667 228.0,33.999 C227.666,34.666 227.333,35.333 227.0,36.0 C162.339,96.993 97.660,158.6 32.999,218.999 C32.0,218.666 30.999,218.333 29.999,217.999 C20.0,206.334 9.998,194.665 0.0,182.999 C64.660,122.6 129.339,60.993 194.0,0.0 Z\"\n        }, null, 4)\n      ]);\n    };\n  }\n});\n",
+      "start": 1720085726643,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/Shapes/line.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  width: \"228px\",\n  height: \"219px\"\n}\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'line',\n  props: ['fillColor'],\n  setup(__props) {\n\nconst props = __props\nconst fillColor = computed(() => props.fillColor)\n\nconst fill = ref(fillColor || \"rgb(25, 255, 131)\")\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"svg\", _hoisted_1, [\n    _createElementVNode(\"path\", {\n      \"fill-rule\": \"evenodd\",\n      style: _normalizeStyle({ fill: _unref(fill) }),\n      class: \"transition-[fill] duration-1000\",\n      d: \"M194.0,0.0 C205.332,11.332 216.667,22.667 228.0,33.999 C227.666,34.666 227.333,35.333 227.0,36.0 C162.339,96.993 97.660,158.6 32.999,218.999 C32.0,218.666 30.999,218.333 29.999,217.999 C20.0,206.334 9.998,194.665 0.0,182.999 C64.660,122.6 129.339,60.993 194.0,0.0 Z\"\n    }, null, 4)\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,kBAAkB,iBAAiB,sBAAsB,qBAAqB,aAAa,YAAY,sBAAsB,2BAA2B;AAElL,MAAM,aAAa;AAAA,EACjB,OAAO;AAAA,EACP,eAAe;AAAA,EACf,OAAO;AAAA,EACP,QAAQ;AACV;AAGA,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO,CAAC,WAAW;AAAA,EACnB,MAAM,SAAS;AAEjB,UAAM,QAAQ;AACd,UAAM,YAAY,SAAS,MAAM,MAAM,SAAS;AAEhD,UAAM,OAAO,IAAI,aAAa,mBAAmB;AAEjD,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QAC3D,oBAAoB,QAAQ;AAAA,UAC1B,aAAa;AAAA,UACb,OAAO,gBAAgB,EAAE,MAAM,OAAO,IAAI,EAAE,CAAC;AAAA,UAC7C,OAAO;AAAA,UACP,GAAG;AAAA,QACL,GAAG,MAAM,CAAC;AAAA,MACZ,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726657,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { computed, ref } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = {\n  xmlns: \"http://www.w3.org/2000/svg\",\n  \"xmlns:xlink\": \"http://www.w3.org/1999/xlink\",\n  width: \"228px\",\n  height: \"219px\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"line\",\n  props: [\"fillColor\"],\n  setup(__props) {\n    const props = __props;\n    const fillColor = computed(() => props.fillColor);\n    const fill = ref(fillColor || \"rgb(25, 255, 131)\");\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"svg\", _hoisted_1, [\n        _createElementVNode(\"path\", {\n          \"fill-rule\": \"evenodd\",\n          style: _normalizeStyle({ fill: _unref(fill) }),\n          class: \"transition-[fill] duration-1000\",\n          d: \"M194.0,0.0 C205.332,11.332 216.667,22.667 228.0,33.999 C227.666,34.666 227.333,35.333 227.0,36.0 C162.339,96.993 97.660,158.6 32.999,218.999 C32.0,218.666 30.999,218.333 29.999,217.999 C20.0,206.334 9.998,194.665 0.0,182.999 C64.660,122.6 129.339,60.993 194.0,0.0 Z\"\n        }, null, 4)\n      ]);\n    };\n  }\n});\n",
+      "start": 1720085726657,
+      "end": 1720085726667,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726669,
+      "end": 1720085726669,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726670,
+      "end": 1720085726671,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726671,
+      "end": 1720085726671,
+      "order": "normal"
+    }
+  ]
+}

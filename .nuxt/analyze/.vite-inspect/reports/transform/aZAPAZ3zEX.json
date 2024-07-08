@@ -1,0 +1,231 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Secret.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1)\n\nimport { ref, inject } from 'vue'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Secret',\n  setup(__props) {\n\nconst router = useRouter()\n\n// authentication\nconst magSecret = inject('magSecret')\n// ref<string | null>(null)\n// magSecret.value = localStorage.getItem('mag_secret')\n\nconst removeSecret = () => {\n  magSecret.value = null\n  localStorage.removeItem('user_token')\n  localStorage.removeItem('xrpl_address')\n  router.push('/')\n}\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    fallback: _withCtx(() => [\n      _hoisted_1\n    ]),\n    default: _withCtx(() => [\n      _createVNode(_component_UTooltip, { text: \"Disconnect and logout\" }, {\n        default: _withCtx(() => [\n          (_unref(magSecret))\n            ? (_openBlock(), _createBlock(_component_UButton, {\n                key: 0,\n                icon: \"i-heroicons-arrow-right-start-on-rectangle-20-solid\",\n                color: \"white\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: removeSecret,\n                class: \"rounded-full\"\n              }))\n            : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})",
+      "start": 1720085726640,
+      "end": 1720085726640
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726640,
+      "end": 1720085726640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { inject } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Secret\",\n  setup(__props) {\n    const router = useRouter();\n    const magSecret = inject(\"magSecret\");\n    const removeSecret = () => {\n      magSecret.value = null;\n      localStorage.removeItem(\"user_token\");\n      localStorage.removeItem(\"xrpl_address\");\n      router.push(\"/\");\n    };\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Disconnect and logout\" }, {\n            default: _withCtx(() => [\n              _unref(magSecret) ? (_openBlock(), _createBlock(_component_UButton, {\n                key: 0,\n                icon: \"i-heroicons-arrow-right-start-on-rectangle-20-solid\",\n                color: \"white\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: removeSecret,\n                class: \"rounded-full\"\n              })) : _createCommentVNode(\"\", true)\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726640,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/Secret.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1)\n\nimport { ref, inject } from 'vue'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Secret',\n  setup(__props) {\n\nconst router = useRouter()\n\n// authentication\nconst magSecret = inject('magSecret')\n// ref<string | null>(null)\n// magSecret.value = localStorage.getItem('mag_secret')\n\nconst removeSecret = () => {\n  magSecret.value = null\n  localStorage.removeItem('user_token')\n  localStorage.removeItem('xrpl_address')\n  router.push('/')\n}\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_UButton = _resolveComponent(\"UButton\")!\n  const _component_UTooltip = _resolveComponent(\"UTooltip\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    fallback: _withCtx(() => [\n      _hoisted_1\n    ]),\n    default: _withCtx(() => [\n      _createVNode(_component_UTooltip, { text: \"Disconnect and logout\" }, {\n        default: _withCtx(() => [\n          (_unref(magSecret))\n            ? (_openBlock(), _createBlock(_component_UButton, {\n                key: 0,\n                icon: \"i-heroicons-arrow-right-start-on-rectangle-20-solid\",\n                color: \"white\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: removeSecret,\n                class: \"rounded-full\"\n              }))\n            : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,oBAAoB,mBAAmB,aAAa,YAAY,eAAe,cAAc,sBAAsB,qBAAqB,WAAW,UAAU,eAAe,cAAc,sBAAsB,2BAA2B;AAErQ,MAAM,aAA0B,oCAAoB,OAAO,EAAE,OAAO,UAAU,GAAG,MAAM,EAAE;AAEzF,SAAc,cAAc;AAG5B,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAEjB,UAAM,SAAS,UAAU;AAGzB,UAAM,YAAY,OAAO,WAAW;AAIpC,UAAM,eAAe,MAAM;AACzB,gBAAU,QAAQ;AAClB,mBAAa,WAAW,YAAY;AACpC,mBAAa,WAAW,cAAc;AACtC,aAAO,KAAK,GAAG;AAAA,IACjB;AAEA,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,sBAAsB,kBAAkB,UAAU;AACxD,YAAM,wBAAwB,kBAAkB,YAAY;AAE5D,aAAQ,WAAW,GAAG,aAAa,uBAAuB,MAAM;AAAA,QAC9D,UAAU,SAAS,MAAM;AAAA,UACvB;AAAA,QACF,CAAC;AAAA,QACD,SAAS,SAAS,MAAM;AAAA,UACtB,aAAa,qBAAqB,EAAE,MAAM,wBAAwB,GAAG;AAAA,YACnE,SAAS,SAAS,MAAM;AAAA,cACrB,OAAO,SAAS,KACZ,WAAW,GAAG,aAAa,oBAAoB;AAAA,gBAC9C,KAAK;AAAA,gBACL,MAAM;AAAA,gBACN,OAAO;AAAA,gBACP,SAAS;AAAA,gBACT,cAAc;AAAA,gBACd,SAAS;AAAA,gBACT,OAAO;AAAA,cACT,CAAC,KACD,oBAAoB,IAAI,IAAI;AAAA,YAClC,CAAC;AAAA,YACD,GAAG;AAAA,UACL,CAAC;AAAA,QACH,CAAC;AAAA,QACD,GAAG;AAAA,MACL,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726654,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726656,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useRouter } from '#app/composables/router';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { inject } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Secret\",\n  setup(__props) {\n    const router = useRouter();\n    const magSecret = inject(\"magSecret\");\n    const removeSecret = () => {\n      magSecret.value = null;\n      localStorage.removeItem(\"user_token\");\n      localStorage.removeItem(\"xrpl_address\");\n      router.push(\"/\");\n    };\n    return (_ctx, _cache) => {\n      const _component_UButton = _resolveComponent(\"UButton\");\n      const _component_UTooltip = _resolveComponent(\"UTooltip\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Disconnect and logout\" }, {\n            default: _withCtx(() => [\n              _unref(magSecret) ? (_openBlock(), _createBlock(_component_UButton, {\n                key: 0,\n                icon: \"i-heroicons-arrow-right-start-on-rectangle-20-solid\",\n                color: \"white\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: removeSecret,\n                class: \"rounded-full\"\n              })) : _createCommentVNode(\"\", true)\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726657,
+      "end": 1720085726667,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3Q,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726667,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/elements/Button.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/overlays/Tooltip.vue\";\nimport { default as __nuxt_component_2 } from \"/home/a/serious_game/albers/node_modules/nuxt/dist/app/components/client-only\";\nimport { useRouter } from '#app/composables/router';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, resolveComponent as _resolveComponent, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode } from \"vue\";\nconst _hoisted_1 = /* @__PURE__ */ _createElementVNode(\"div\", { class: \"w-8 h-8\" }, null, -1);\nimport { inject } from \"vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Secret\",\n  setup(__props) {\n    const router = useRouter();\n    const magSecret = inject(\"magSecret\");\n    const removeSecret = () => {\n      magSecret.value = null;\n      localStorage.removeItem(\"user_token\");\n      localStorage.removeItem(\"xrpl_address\");\n      router.push(\"/\");\n    };\n    return (_ctx, _cache) => {\n      const _component_UButton = __nuxt_component_0;\n      const _component_UTooltip = __nuxt_component_1;\n      const _component_ClientOnly = __nuxt_component_2;\n      return _openBlock(), _createBlock(_component_ClientOnly, null, {\n        fallback: _withCtx(() => [\n          _hoisted_1\n        ]),\n        default: _withCtx(() => [\n          _createVNode(_component_UTooltip, { text: \"Disconnect and logout\" }, {\n            default: _withCtx(() => [\n              _unref(magSecret) ? (_openBlock(), _createBlock(_component_UButton, {\n                key: 0,\n                icon: \"i-heroicons-arrow-right-start-on-rectangle-20-solid\",\n                color: \"white\",\n                variant: \"ghost\",\n                \"aria-label\": \"Theme\",\n                onClick: removeSecret,\n                class: \"rounded-full\"\n              })) : _createCommentVNode(\"\", true)\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      });\n    };\n  }\n});\n",
+      "start": 1720085726669,
+      "end": 1720085726669,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726670,
+      "end": 1720085726671,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726671,
+      "end": 1720085726671,
+      "order": "normal"
+    }
+  ]
+}

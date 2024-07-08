@@ -1,0 +1,35 @@
+{
+  "extends": "../.nuxt/tsconfig.server.json",
+}
+
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "strict": true,
+//     "jsx": "preserve",
+//     "esModuleInterop": true,
+//     "allowJs": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "skipLibCheck": true,
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["./*"]
+//     },
+//     "types": ["@types/node", "@nuxt/types"]
+//   },
+//   "exclude": [
+//     "node_modules",
+//     ".nuxt",
+//     "dist",
+//     "**/*.js",
+//     "playground-1.mongodb.js",
+//     "sketches/example/index.js"
+//   ],
+//   "include": [
+//     "**/*.ts",
+//     "**/*.tsx",
+//     "nuxt.config.ts"
+//   ]
+// }

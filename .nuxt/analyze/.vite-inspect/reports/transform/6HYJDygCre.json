@@ -1,0 +1,215 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/layouts/home.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div>\n    <div class=\"absolute top-4 right-4 z-10\">\n      <ColorMode />\n    </div>\n    <div class=\"flex h-screen\">\n      <div class=\"m-auto w-full text-center\">\n        <ShapesBackground />\n\n        <slot />\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "start": 1720085720644,
+      "end": 1720085724646,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085724646,
+      "end": 1720085724646,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, renderSlot as _renderSlot, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"absolute top-4 right-4 z-10\" }\nconst _hoisted_2 = { class: \"flex h-screen\" }\nconst _hoisted_3 = { class: \"m-auto w-full text-center\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_ColorMode = _resolveComponent(\"ColorMode\")\n  const _component_ShapesBackground = _resolveComponent(\"ShapesBackground\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createVNode(_component_ColorMode)\n    ]),\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createVNode(_component_ShapesBackground),\n        _renderSlot(_ctx.$slots, \"default\")\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1720085724646,
+      "end": 1720085724647,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085724647,
+      "end": 1720085724647,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085724647,
+      "end": 1720085724648,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085724648,
+      "end": 1720085724648,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085724648,
+      "end": 1720085724648,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085724648,
+      "end": 1720085724648,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085724648,
+      "end": 1720085724648,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/components/ColorMode.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/components/Shapes/ShapesBackground.vue\";\nconst _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, renderSlot as _renderSlot, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"absolute top-4 right-4 z-10\" }\nconst _hoisted_2 = { class: \"flex h-screen\" }\nconst _hoisted_3 = { class: \"m-auto w-full text-center\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_ColorMode = __nuxt_component_0\n  const _component_ShapesBackground = __nuxt_component_1\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createVNode(_component_ColorMode)\n    ]),\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createVNode(_component_ShapesBackground),\n        _renderSlot(_ctx.$slots, \"default\")\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1720085724648,
+      "end": 1720085724649,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085724649,
+      "end": 1720085724649,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085724649,
+      "end": 1720085724649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085724649,
+      "end": 1720085724649,
+      "order": "normal"
+    }
+  ]
+}

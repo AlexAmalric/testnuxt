@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Shapes/squigle.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"808\" height=\"256\">\n    <path fill-rule=\"evenodd\" :style=\"{ fill }\" class=\"transition-[fill] duration-1000\"\n      d=\"M392.999,0.0 C408.998,0.0 425.1,0.0 440.999,0.0 C447.96,101.563 572.713,55.796 653.0,67.999 C733.843,80.288 808.617,148.157 807.999,256.0 C792.1,255.666 775.998,255.333 759.999,255.0 C760.781,172.97 704.934,119.787 639.999,115.0 C573.209,108.472 506.543,132.912 444.0,92.999 C434.106,86.686 423.111,79.30 417.999,67.999 C417.333,68.666 416.666,69.333 415.999,69.999 C392.549,88.661 376.883,107.202 340.0,113.999 C277.108,125.590 191.958,98.887 141.0,122.999 C43.323,169.218 52.752,234.7 48.0,256.0 C32.1,255.666 15.998,255.333 0.0,255.0 C0.0,254.666 0.0,254.333 0.0,254.0 C9.874,150.138 71.438,92.436 139.0,72.999 C226.938,47.701 387.81,108.502 392.999,0.0 Z\" />\n  </svg>\n</template>\n\n<script setup lang=\"ts\">\nconst props = defineProps(['fillColor'])\nconst fillColor = computed(() => props.fillColor)\n\nconst fill = ref(fillColor || \"rgb(255, 103, 26)\")\n</script>",
+      "start": 1720085726367,
+      "end": 1720085726501,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726501,
+      "end": 1720085726501,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/a/serious_game/albers/components/Shapes/squigle.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/a/serious_game/albers/components/Shapes/squigle.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
+      "start": 1720085726501,
+      "end": 1720085726526,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726527,
+      "end": 1720085726527,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726527,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "normal"
+    }
+  ]
+}

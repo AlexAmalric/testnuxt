@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/QRCodeModal.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <UModal class=\"\">\n    <UCard :ui=\"{ ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }\" class=\"text-center\">\n      <div class=\"font-title mb-4\">Connect to your wallet</div>\n      <div class=\"flex justify-center\">\n        <img :src=\"qrCodeSrc\" alt=\"QR Code (click to copy)\" class=\"rounded-md\" @click=\"onImageClick()\">\n      </div>\n      <div class=\"font-title mt-4\">\n        <p>Scan with Xaman or click the image to copy code manually.</p>\n      </div>\n    </UCard>\n  </UModal>\n</template>\n\n<script lang=\"ts\" setup>\nconst router = useRouter()\nconst props = defineProps(['isOpen', 'qrCodeSrc', 'mobileUrl', 'uuid'])\nconst {\n  qrCodeSrc,\n  isConnection,\n  mobileUrl,\n  uuid\n} = toRefs(props)\n\nconst closeModal = () => {\n  this.$emit('close');\n}\nconst onImageClick = async () => {\n  if (mobileUrl.value) {\n    window.open(mobileUrl.value, '_blank')\n  } else {\n    try {\n      await navigator.clipboard.writeText(value)\n      console.log('Text copied to clipboard')\n      alert(\"Copied to clipboard. Paste in Xaman to continue.\")\n    } catch (err) {\n      console.error('Failed to copy: ', err);\n      // Optionally, fallback to another copy method or show an error message.\n    }\n  }\n}\n</script>\n\n<!-- <style scoped>\n.modal-overlay {\n  display: flex;\n  position: fixed;\n  z-index: 1000;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.5);\n  justify-content: center;\n  align-items: center;\n}\n\n.modal-content {\n  position: relative;\n  background-color: #fefefe;\n  padding: 20px;\n  border: 1px solid #888;\n  text-align: center;\n  width: 300px;\n  /* Adjust as needed */\n}\n\n.modal-header {\n  position: relative;\n}\n\n.modal-header h2 {\n  margin: 0;\n}\n\n.close {\n  position: absolute;\n  top: 0;\n  right: 0;\n  color: #aaaaaa;\n  font-size: 28px;\n  font-weight: bold;\n  background: none;\n  border: none;\n  cursor: pointer;\n}\n\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n}\n\n.qr-code-img {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 80%;\n  /* Adjust as needed */\n  margin-top: 20px;\n  margin-bottom: 10px;\n}\n\n.modal-body p {\n  /* margin-top: 10px; */\n  margin-bottom: 20px;\n}\n\n.verification-logo {\n  font-size: 24px;\n  margin-top: 20px;\n}\n\n.modal-body p,\n.modal-header h2 {\n  color: black;\n}\n\n.link-style {\n  cursor: pointer;\n  color: blue;\n  text-decoration: underline;\n}\n\n.link-style:hover {\n  color: darkblue;\n}\n</style> -->\n",
+      "start": 1720085726364,
+      "end": 1720085726493,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726494,
+      "end": 1720085726494,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/a/serious_game/albers/components/QRCodeModal.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/a/serious_game/albers/components/QRCodeModal.vue?vue&type=script&setup=true&lang.ts\";\nexport default _sfc_main;\n",
+      "start": 1720085726494,
+      "end": 1720085726526,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726526,
+      "end": 1720085726526,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726527,
+      "end": 1720085726527,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1720085726527,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1720085726528,
+      "end": 1720085726528,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726529,
+      "end": 1720085726529,
+      "order": "normal"
+    }
+  ]
+}

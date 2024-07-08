@@ -1,0 +1,233 @@
+{
+  "resolvedId": "/home/a/serious_game/albers/components/Albers.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, withCtx as _withCtx, createVNode as _createVNode } from \"vue\"\n\nconst _hoisted_1 = { key: 0 }\nconst _hoisted_2 = { key: 1 }\nconst _hoisted_3 = {\n  key: 0,\n  class: \"max-w-lg\"\n}\nconst _hoisted_4 = [\"src\"]\n\nimport { computed, inject } from 'vue'\nimport API from '~/server/client'\nimport { sketch } from '~/sketches/xalbers'\nimport p5 from \"p5\"\nimport { useRoute } from 'vue-router'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Albers',\n  props: {\n  xrplAddress: String\n},\n  emits: ['loaded'],\n  setup(__props, { emit: __emit }) {\n\nconst updateColors = inject('updateColors', () => { })\n\n// define xrplAddress \nconst props = __props\n\nconst { query } = useRoute()\nconst forceSave = query?.force === 'save'\n\nconst emit = __emit;\n\nconst { xrplAddress } = props\nconsole.log('albers component', { xrplAddress })\n\n// authentication\nconst magSecret = inject('magSecret')\n\nconst canvas = ref(null)\n\nlet myp5: any = null\n\nconst albersURI = ref(null)\n\nonMounted(() => {\n  nextTick(async () => {\n\n    myp5 = new p5(sketch({\n      xrplAddress,\n      colorCallback: (sketchColors: any) => {\n        updateColors(sketchColors)\n      },\n      onLoaded: ({ imageData }) => {\n        onSketchLoaded({ myp5, imageData })\n      }\n    }), canvas.value)\n\n    console.log(canvas.value)\n\n  })\n})\n\nconst onSketchLoaded = async ({ myp5, imageData }: { myp5: any, imageData: string }) => {\n  // let imageData = myp5.canvas.toDataURL() // Defaults to PNG format\n  console.log({ myp5, imageData })\n  // check if the url exists\n  const imageExists = await API.albersURLExists({ xrplAddress })\n  console.log({ imageExists })\n  if ((imageExists === true) && !forceSave) {\n    console.log(`Image for ${xrplAddress} existed`)\n    albersURI.value = `https://albers.fra1.cdn.digitaloceanspaces.com/alberx-${xrplAddress}.webp`\n  } else {\n    // if it doesn't then run through the creation flow\n    const { url } = await API.createAlbersURL({\n      xrplAddress,\n      imageData\n    })\n    albersURI.value = url\n    console.log({ url })\n  }\n  console.log('should emit', { url: albersURI.value })\n  emit('loaded', { url: albersURI.value })\n}\nonUnmounted(() => {\n  if (myp5) {\n    myp5.remove()\n  }\n});\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_USkeleton = _resolveComponent(\"USkeleton\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (!_unref(magSecret))\n    ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, \"This view requires the mag secret.\"))\n    : (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n        _createVNode(_component_ClientOnly, null, {\n          default: _withCtx(() => [\n            _createElementVNode(\"canvas\", {\n              ref_key: \"canvas\",\n              ref: canvas,\n              class: \"w-full scale-75 hidden\"\n            }, null, 512),\n            (_unref(albersURI))\n              ? (_openBlock(), _createElementBlock(\"figure\", _hoisted_3, [\n                  _createElementVNode(\"img\", {\n                    class: \"h-auto max-w-full rounded-lg\",\n                    src: _unref(albersURI),\n                    alt: \"image description\"\n                  }, null, 8, _hoisted_4)\n                ]))\n              : (_openBlock(), _createBlock(_component_USkeleton, {\n                  key: 1,\n                  class: \"h-full w-full\",\n                  ui: { rounded: 'rounded-lg' }\n                }))\n          ]),\n          _: 1\n        })\n      ]))\n}\n}\n\n})",
+      "start": 1720085726572,
+      "end": 1720085726572
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1720085726572,
+      "end": 1720085726572,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1720085726572,
+      "end": 1720085726572,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1720085726572,
+      "end": 1720085726572,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720085726572,
+      "end": 1720085726572,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, withCtx as _withCtx, createVNode as _createVNode } from \"vue\";\nconst _hoisted_1 = { key: 0 };\nconst _hoisted_2 = { key: 1 };\nconst _hoisted_3 = {\n  key: 0,\n  class: \"max-w-lg\"\n};\nconst _hoisted_4 = [\"src\"];\nimport { inject } from \"vue\";\nimport API from \"~/server/client\";\nimport { sketch } from \"~/sketches/xalbers\";\nimport p5 from \"p5\";\nimport { useRoute } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Albers\",\n  props: {\n    xrplAddress: String\n  },\n  emits: [\"loaded\"],\n  setup(__props, { emit: __emit }) {\n    const updateColors = inject(\"updateColors\", () => {\n    });\n    const props = __props;\n    const { query } = useRoute();\n    const forceSave = query?.force === \"save\";\n    const emit = __emit;\n    const { xrplAddress } = props;\n    console.log(\"albers component\", { xrplAddress });\n    const magSecret = inject(\"magSecret\");\n    const canvas = ref(null);\n    let myp5 = null;\n    const albersURI = ref(null);\n    onMounted(() => {\n      nextTick(async () => {\n        myp5 = new p5(sketch({\n          xrplAddress,\n          colorCallback: (sketchColors) => {\n            updateColors(sketchColors);\n          },\n          onLoaded: ({ imageData }) => {\n            onSketchLoaded({ myp5, imageData });\n          }\n        }), canvas.value);\n        console.log(canvas.value);\n      });\n    });\n    const onSketchLoaded = async ({ myp5: myp52, imageData }) => {\n      console.log({ myp5: myp52, imageData });\n      const imageExists = await API.albersURLExists({ xrplAddress });\n      console.log({ imageExists });\n      if (imageExists === true && !forceSave) {\n        console.log(`Image for ${xrplAddress} existed`);\n        albersURI.value = `https://albers.fra1.cdn.digitaloceanspaces.com/alberx-${xrplAddress}.webp`;\n      } else {\n        const { url } = await API.createAlbersURL({\n          xrplAddress,\n          imageData\n        });\n        albersURI.value = url;\n        console.log({ url });\n      }\n      console.log(\"should emit\", { url: albersURI.value });\n      emit(\"loaded\", { url: albersURI.value });\n    };\n    onUnmounted(() => {\n      if (myp5) {\n        myp5.remove();\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_USkeleton = _resolveComponent(\"USkeleton\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return !_unref(magSecret) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, \"This view requires the mag secret.\")) : (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n        _createVNode(_component_ClientOnly, null, {\n          default: _withCtx(() => [\n            _createElementVNode(\"canvas\", {\n              ref_key: \"canvas\",\n              ref: canvas,\n              class: \"w-full scale-75 hidden\"\n            }, null, 512),\n            _unref(albersURI) ? (_openBlock(), _createElementBlock(\"figure\", _hoisted_3, [\n              _createElementVNode(\"img\", {\n                class: \"h-auto max-w-full rounded-lg\",\n                src: _unref(albersURI),\n                alt: \"image description\"\n              }, null, 8, _hoisted_4)\n            ])) : (_openBlock(), _createBlock(_component_USkeleton, {\n              key: 1,\n              class: \"h-full w-full\",\n              ui: { rounded: \"rounded-lg\" }\n            }))\n          ]),\n          _: 1\n        })\n      ]));\n    };\n  }\n});\n",
+      "start": 1720085726572,
+      "end": 1720085726654,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/a/serious_game/albers/components/Albers.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, withCtx as _withCtx, createVNode as _createVNode } from \"vue\"\n\nconst _hoisted_1 = { key: 0 }\nconst _hoisted_2 = { key: 1 }\nconst _hoisted_3 = {\n  key: 0,\n  class: \"max-w-lg\"\n}\nconst _hoisted_4 = [\"src\"]\n\nimport { computed, inject } from 'vue'\nimport API from '~/server/client'\nimport { sketch } from '~/sketches/xalbers'\nimport p5 from \"p5\"\nimport { useRoute } from 'vue-router'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Albers',\n  props: {\n  xrplAddress: String\n},\n  emits: ['loaded'],\n  setup(__props, { emit: __emit }) {\n\nconst updateColors = inject('updateColors', () => { })\n\n// define xrplAddress \nconst props = __props\n\nconst { query } = useRoute()\nconst forceSave = query?.force === 'save'\n\nconst emit = __emit;\n\nconst { xrplAddress } = props\nconsole.log('albers component', { xrplAddress })\n\n// authentication\nconst magSecret = inject('magSecret')\n\nconst canvas = ref(null)\n\nlet myp5: any = null\n\nconst albersURI = ref(null)\n\nonMounted(() => {\n  nextTick(async () => {\n\n    myp5 = new p5(sketch({\n      xrplAddress,\n      colorCallback: (sketchColors: any) => {\n        updateColors(sketchColors)\n      },\n      onLoaded: ({ imageData }) => {\n        onSketchLoaded({ myp5, imageData })\n      }\n    }), canvas.value)\n\n    console.log(canvas.value)\n\n  })\n})\n\nconst onSketchLoaded = async ({ myp5, imageData }: { myp5: any, imageData: string }) => {\n  // let imageData = myp5.canvas.toDataURL() // Defaults to PNG format\n  console.log({ myp5, imageData })\n  // check if the url exists\n  const imageExists = await API.albersURLExists({ xrplAddress })\n  console.log({ imageExists })\n  if ((imageExists === true) && !forceSave) {\n    console.log(`Image for ${xrplAddress} existed`)\n    albersURI.value = `https://albers.fra1.cdn.digitaloceanspaces.com/alberx-${xrplAddress}.webp`\n  } else {\n    // if it doesn't then run through the creation flow\n    const { url } = await API.createAlbersURL({\n      xrplAddress,\n      imageData\n    })\n    albersURI.value = url\n    console.log({ url })\n  }\n  console.log('should emit', { url: albersURI.value })\n  emit('loaded', { url: albersURI.value })\n}\nonUnmounted(() => {\n  if (myp5) {\n    myp5.remove()\n  }\n});\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_USkeleton = _resolveComponent(\"USkeleton\")!\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n\n  return (!_unref(magSecret))\n    ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, \"This view requires the mag secret.\"))\n    : (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n        _createVNode(_component_ClientOnly, null, {\n          default: _withCtx(() => [\n            _createElementVNode(\"canvas\", {\n              ref_key: \"canvas\",\n              ref: canvas,\n              class: \"w-full scale-75 hidden\"\n            }, null, 512),\n            (_unref(albersURI))\n              ? (_openBlock(), _createElementBlock(\"figure\", _hoisted_3, [\n                  _createElementVNode(\"img\", {\n                    class: \"h-auto max-w-full rounded-lg\",\n                    src: _unref(albersURI),\n                    alt: \"image description\"\n                  }, null, 8, _hoisted_4)\n                ]))\n              : (_openBlock(), _createBlock(_component_USkeleton, {\n                  key: 1,\n                  class: \"h-full w-full\",\n                  ui: { rounded: 'rounded-lg' }\n                }))\n          ]),\n          _: 1\n        })\n      ]))\n}\n}\n\n})"
+        ],
+        "mappings": "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",
+        "names": [
+          "myp5"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1720085726654,
+      "end": 1720085726654,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726654,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1720085726655,
+      "end": 1720085726655,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1720085726655,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720085726656,
+      "end": 1720085726656,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1720085726656,
+      "end": 1720085726657,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { ref, onMounted, nextTick, onUnmounted } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, withCtx as _withCtx, createVNode as _createVNode } from \"vue\";\nconst _hoisted_1 = { key: 0 };\nconst _hoisted_2 = { key: 1 };\nconst _hoisted_3 = {\n  key: 0,\n  class: \"max-w-lg\"\n};\nconst _hoisted_4 = [\"src\"];\nimport { inject } from \"vue\";\nimport API from \"~/server/client\";\nimport { sketch } from \"~/sketches/xalbers\";\nimport p5 from \"p5\";\nimport { useRoute } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Albers\",\n  props: {\n    xrplAddress: String\n  },\n  emits: [\"loaded\"],\n  setup(__props, { emit: __emit }) {\n    const updateColors = inject(\"updateColors\", () => {\n    });\n    const props = __props;\n    const { query } = useRoute();\n    const forceSave = query?.force === \"save\";\n    const emit = __emit;\n    const { xrplAddress } = props;\n    console.log(\"albers component\", { xrplAddress });\n    const magSecret = inject(\"magSecret\");\n    const canvas = ref(null);\n    let myp5 = null;\n    const albersURI = ref(null);\n    onMounted(() => {\n      nextTick(async () => {\n        myp5 = new p5(sketch({\n          xrplAddress,\n          colorCallback: (sketchColors) => {\n            updateColors(sketchColors);\n          },\n          onLoaded: ({ imageData }) => {\n            onSketchLoaded({ myp5, imageData });\n          }\n        }), canvas.value);\n        console.log(canvas.value);\n      });\n    });\n    const onSketchLoaded = async ({ myp5: myp52, imageData }) => {\n      console.log({ myp5: myp52, imageData });\n      const imageExists = await API.albersURLExists({ xrplAddress });\n      console.log({ imageExists });\n      if (imageExists === true && !forceSave) {\n        console.log(`Image for ${xrplAddress} existed`);\n        albersURI.value = `https://albers.fra1.cdn.digitaloceanspaces.com/alberx-${xrplAddress}.webp`;\n      } else {\n        const { url } = await API.createAlbersURL({\n          xrplAddress,\n          imageData\n        });\n        albersURI.value = url;\n        console.log({ url });\n      }\n      console.log(\"should emit\", { url: albersURI.value });\n      emit(\"loaded\", { url: albersURI.value });\n    };\n    onUnmounted(() => {\n      if (myp5) {\n        myp5.remove();\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_USkeleton = _resolveComponent(\"USkeleton\");\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      return !_unref(magSecret) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, \"This view requires the mag secret.\")) : (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n        _createVNode(_component_ClientOnly, null, {\n          default: _withCtx(() => [\n            _createElementVNode(\"canvas\", {\n              ref_key: \"canvas\",\n              ref: canvas,\n              class: \"w-full scale-75 hidden\"\n            }, null, 512),\n            _unref(albersURI) ? (_openBlock(), _createElementBlock(\"figure\", _hoisted_3, [\n              _createElementVNode(\"img\", {\n                class: \"h-auto max-w-full rounded-lg\",\n                src: _unref(albersURI),\n                alt: \"image description\"\n              }, null, 8, _hoisted_4)\n            ])) : (_openBlock(), _createBlock(_component_USkeleton, {\n              key: 1,\n              class: \"h-full w-full\",\n              ui: { rounded: \"rounded-lg\" }\n            }))\n          ]),\n          _: 1\n        })\n      ]));\n    };\n  }\n});\n",
+      "start": 1720085726657,
+      "end": 1720085726667,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3Q,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC;AACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACf,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1720085726667,
+      "end": 1720085726667,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1720085726667,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1720085726668,
+      "end": 1720085726668,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/a/serious_game/albers/node_modules/@nuxt/ui/dist/runtime/components/layout/Skeleton.vue\";\nimport { default as __nuxt_component_1 } from \"/home/a/serious_game/albers/node_modules/nuxt/dist/app/components/client-only\";\nimport { ref, onMounted, nextTick, onUnmounted } from 'vue';\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, openBlock as _openBlock, createElementBlock as _createElementBlock, createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, withCtx as _withCtx, createVNode as _createVNode } from \"vue\";\nconst _hoisted_1 = { key: 0 };\nconst _hoisted_2 = { key: 1 };\nconst _hoisted_3 = {\n  key: 0,\n  class: \"max-w-lg\"\n};\nconst _hoisted_4 = [\"src\"];\nimport { inject } from \"vue\";\nimport API from \"~/server/client\";\nimport { sketch } from \"~/sketches/xalbers\";\nimport p5 from \"p5\";\nimport { useRoute } from \"vue-router\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Albers\",\n  props: {\n    xrplAddress: String\n  },\n  emits: [\"loaded\"],\n  setup(__props, { emit: __emit }) {\n    const updateColors = inject(\"updateColors\", () => {\n    });\n    const props = __props;\n    const { query } = useRoute();\n    const forceSave = query?.force === \"save\";\n    const emit = __emit;\n    const { xrplAddress } = props;\n    console.log(\"albers component\", { xrplAddress });\n    const magSecret = inject(\"magSecret\");\n    const canvas = ref(null);\n    let myp5 = null;\n    const albersURI = ref(null);\n    onMounted(() => {\n      nextTick(async () => {\n        myp5 = new p5(sketch({\n          xrplAddress,\n          colorCallback: (sketchColors) => {\n            updateColors(sketchColors);\n          },\n          onLoaded: ({ imageData }) => {\n            onSketchLoaded({ myp5, imageData });\n          }\n        }), canvas.value);\n        console.log(canvas.value);\n      });\n    });\n    const onSketchLoaded = async ({ myp5: myp52, imageData }) => {\n      console.log({ myp5: myp52, imageData });\n      const imageExists = await API.albersURLExists({ xrplAddress });\n      console.log({ imageExists });\n      if (imageExists === true && !forceSave) {\n        console.log(`Image for ${xrplAddress} existed`);\n        albersURI.value = `https://albers.fra1.cdn.digitaloceanspaces.com/alberx-${xrplAddress}.webp`;\n      } else {\n        const { url } = await API.createAlbersURL({\n          xrplAddress,\n          imageData\n        });\n        albersURI.value = url;\n        console.log({ url });\n      }\n      console.log(\"should emit\", { url: albersURI.value });\n      emit(\"loaded\", { url: albersURI.value });\n    };\n    onUnmounted(() => {\n      if (myp5) {\n        myp5.remove();\n      }\n    });\n    return (_ctx, _cache) => {\n      const _component_USkeleton = __nuxt_component_0;\n      const _component_ClientOnly = __nuxt_component_1;\n      return !_unref(magSecret) ? (_openBlock(), _createElementBlock(\"div\", _hoisted_1, \"This view requires the mag secret.\")) : (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n        _createVNode(_component_ClientOnly, null, {\n          default: _withCtx(() => [\n            _createElementVNode(\"canvas\", {\n              ref_key: \"canvas\",\n              ref: canvas,\n              class: \"w-full scale-75 hidden\"\n            }, null, 512),\n            _unref(albersURI) ? (_openBlock(), _createElementBlock(\"figure\", _hoisted_3, [\n              _createElementVNode(\"img\", {\n                class: \"h-auto max-w-full rounded-lg\",\n                src: _unref(albersURI),\n                alt: \"image description\"\n              }, null, 8, _hoisted_4)\n            ])) : (_openBlock(), _createBlock(_component_USkeleton, {\n              key: 1,\n              class: \"h-full w-full\",\n              ui: { rounded: \"rounded-lg\" }\n            }))\n          ]),\n          _: 1\n        })\n      ]));\n    };\n  }\n});\n",
+      "start": 1720085726669,
+      "end": 1720085726669,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1720085726670,
+      "end": 1720085726670,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720085726670,
+      "end": 1720085726671,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720085726671,
+      "end": 1720085726671,
+      "order": "normal"
+    }
+  ]
+}
